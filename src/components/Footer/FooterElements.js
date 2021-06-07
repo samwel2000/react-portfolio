@@ -27,6 +27,11 @@ export const FooterEmail = styled.a`
         color: var(--green);
     }
 `
+export const FooterInfo = styled.p`
+    color: var(--slate);
+    font-size: 1rem;
+    text-align: center;
+`
 export const ExtraFooter = styled.ul`
     display: flex;
     justify-content: center;

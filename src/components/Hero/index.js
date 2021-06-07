@@ -10,7 +10,7 @@ import {
 
 function Hero() {
     return (
-        <HeroWrapper>
+        <HeroWrapper id="hero">
             <HeroIntro>Hi, my name is</HeroIntro>
             <HeroName>Samwel Godfrey.</HeroName>
             <BioHeader>I bring ideas to life</BioHeader>

@@ -6,7 +6,13 @@ import {
     Linkedin, 
     Twitter, 
 } from '../Orientation/OrientationElements';
-import {FooterWrapper,FooterItem,ExtraFooter, FooterEmail,SocialLink} from './FooterElements'
+import {
+    FooterWrapper,
+    FooterItem,
+    ExtraFooter, 
+    FooterEmail,
+    SocialLink,
+} from './FooterElements';
 
 function Footer() {
     return (

@@ -10,6 +10,7 @@ export const Nav = styled.nav`
     width: 90%;
     left: auto;
     right: auto;
+    z-index: 10;
 `
 export const NavbarWrapper = styled.div`
     padding: 1rem 0;

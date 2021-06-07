@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import Mobilenav from '../Mobilenav';
 import { 
     Nav,
@@ -16,17 +17,16 @@ function Navbar() {
 
     const HandleClick = () => {
         setisOpen(!isOpen)
-        console.log(isOpen)
     }
     return (
         <Nav>
             <NavbarWrapper>
                 <LogoWrapper>
-                    <TextLogo>SG</TextLogo>
+                    <TextLogo><Link to="hero">SG</Link></TextLogo>
                 </LogoWrapper>
                 <NavMenu>
-                    <NavLink to="/">About Me</NavLink>
-                    <NavLink to="/">Education</NavLink>
+                    <NavLink to="about">About Me</NavLink>
+                    <NavLink to="skills">My skills</NavLink>
                     <NavLink to="/">Experience</NavLink>
                     <NavLink to="/">Work</NavLink>
                     <NavLink to="/">Contact</NavLink>

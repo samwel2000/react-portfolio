@@ -1,6 +1,19 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+    @font-face {
+        font-family: myFirstFont;
+        src: url(require('./assets/fonts/Righteous-Regular.tff));
+    }
+    @font-face {
+        font-family: mySecondFont;
+        src: url(require('./assets/fonts/Merriweather-Bold.tff));
+    }
+    @font-face {
+        font-family: myThirdFont;
+        src: url(require('./assets/fonts/VarelaRound-Regular.tff));
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -22,6 +35,10 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background: var(--dark-navy);
         color: var(--light-slate);
+        font-family: myThirdFont;
+    }
+    br {
+        margin-top: 5rem;
     }
 `
 const MyContainer = styled.div`
@@ -30,25 +47,32 @@ const MyContainer = styled.div`
 `
 export default MyContainer
 
-export const SectionHeading = styled.h1`
-    color: var(--light-slate);
-    width: 100%;
-    font-size: clamp(26px,5vw,32px);
-    white-space: nowrap;
-    counter-increment: section 1;
-
-    &:before {
-        content: "0"counter(section)".  ";
-        color: var(--green);
-    }
-
+export const HeadingDiv = styled.div`
     &:after {
         content: "";
         display: block;
-        width: 50%;
+        width: 70%;
         height: 2px;
-        margin-left: 150px;
         margin-top: -15px;
         background-color: var(--lightest-navy);
-}
+    }
+
+    @media screen and (max-width: 550px){
+        &:after {
+            width: 100%;
+        }
+    }
+`
+export const SectionHeading = styled.h1`
+    display: inline;
+    color: var(--light-slate);
+    background: var(--dark-navy);
+    padding-right: 1rem;
+    font-size: clamp(26px,5vw,32px);
+    white-space: nowrap;
+
+    &:before {
+        content: "${props => props.num}. ";
+        color: var(--green);
+    }
 ` 

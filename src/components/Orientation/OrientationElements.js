@@ -47,7 +47,7 @@ export const RightOrientation = styled.div`
     width: 40px;
     position: fixed;
     bottom: 0px;
-    right: 5%;
+    right: 4%;
     left: auto;
     z-index: 10;
     color: var(--light-slate);

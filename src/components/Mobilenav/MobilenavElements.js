@@ -23,8 +23,8 @@ export const MobileWrapper = styled.div`
     margin: 0 auto;
     padding-right: 1.1rem ;
     background: var(--green-tint);
-    backdrop-filter: blur( 15px );
-    -webkit-backdrop-filter: blur( 15px );
+    backdrop-filter: blur( 100px );
+    -webkit-backdrop-filter: blur( 100px );
     border-radius: 4px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     flex-direction: column;
