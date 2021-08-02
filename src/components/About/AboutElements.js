@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutWrapper = styled.section`
     min-height: 80vh;
-    width: 86%;
+    width: 76%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
@@ -38,6 +38,7 @@ export const ImageSection = styled.div`
     display: block;
     position: relative;
     margin: auto;
+    margin-left: 2rem;
     background: var(--dark-navy);
     transition: 1s ease-in-out;
 
@@ -46,6 +47,7 @@ export const ImageSection = styled.div`
         width: 100%;
         height: 100%;
         border: 2px solid var(--green);
+        border-radius: 5px;
         position: absolute;
         top: 5%;
         left: 5%;
@@ -58,14 +60,38 @@ export const ImageSection = styled.div`
         left: 5.5%;
         transition: 0.1s ease-in-out;
     }
+    @media screen and (max-width:769px){
+        margin-left: auto;
+    }
 `
 export const ImageDiv = styled.div`
-    background:var(--green-tint);
+    // background:var(--green-tint);
+    border-radius: 5px;
+    // position: relative;
+
+    // &::after {
+    //     content:"";
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     border-radius: 5px;
+    //     z-index: 5;
+    //     top: 0;
+    //     left: 0;
+    //     background: var(--green);
+    //     opacity: 0.3;
+    //     transition: 0.5s ease-in-out;
+    // }
+
+    // &::after:hover {
+    //     opacity: 0;
+    // }
 `
 export const AboutImage = styled.img`
-    width: 100%;
+    width: 18rem;
     mix-blend-mode: overlay;
     transition-duration: 1s;
+    border-radius: 5px;
     
     &:hover {
         mix-blend-mode: normal;

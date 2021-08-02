@@ -16,7 +16,7 @@ export const HeroWrapper = styled.section`
 `
 export const HeroIntro = styled.p`
     color: var(--green);
-    font-size: clamp(7px,8vw,14px);
+    font-size: clamp(9px,8vw,18px);
     margin:0;
 `
 export const HeroName = styled.h1`
@@ -30,7 +30,7 @@ export const HeroName = styled.h1`
 export const BioHeader = styled.h2`
     margin-top: 10px;
     color: var(--slate);
-    line-height: 0.9;
+    line-height: 1.1;
     font-size: clamp(40px, 8vw, 80px);
 `
 export const BioContent = styled.h3`

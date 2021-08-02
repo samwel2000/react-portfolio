@@ -10,15 +10,15 @@ function App() {
       <Router>
         <GlobalStyles />
         <Switch>
-          <Route path="/blog/">
-            <Blog />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
+
+          <Route path="/blog/" component={Blog} />
+
+          <Route exact path="/" component={Home} />
+
           <Route path="*">
             <Redirect to="/" />
           </Route>
+          
         </Switch>
       </Router>
     </>

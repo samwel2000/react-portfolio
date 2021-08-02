@@ -22,7 +22,7 @@ function About() {
             <InnerContent>
                 <AboutInfo>
                     <Paragraph>
-                        Hello! I'm Samwel, I am a fresh Statistics graduate with full stack (django-react) 
+                        Hello! I'm Samwel, a fresh Statistics graduate with full stack (django-react) 
                         development skills based in Dar es salaam, TZ.
                     </Paragraph>
                     <Paragraph> 

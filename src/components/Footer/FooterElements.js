@@ -41,6 +41,7 @@ export const ExtraFooter = styled.ul`
 export const FooterItem = styled.li`
 color: var(--light-slate);
 transition: 0.2s ease-in-out;
+margin-left: 0.5rem;
 transform: scale(1);
 
 &:hover {

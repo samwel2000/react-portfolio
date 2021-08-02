@@ -15,6 +15,7 @@ export const MobileNav = styled.aside`
     z-index: 999;
     display: grid;
     place-items: center;
+    background: inherit;
 `
 export const MobileWrapper = styled.div`
     display: flex;

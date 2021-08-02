@@ -8,6 +8,7 @@ import MyContainer from '../GlobalElements';
 import { FooterInfo } from '../components/Footer/FooterElements'
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
+import Project from '../components/Projects';
 
 function Home() {
     return (
@@ -23,9 +24,11 @@ function Home() {
 
                 <About />
 
+                <Experience />
+
                 <Skills />
 
-                <Experience />
+                <Project />
 
             </main>
             <footer>

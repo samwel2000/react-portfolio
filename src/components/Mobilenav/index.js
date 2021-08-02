@@ -13,13 +13,13 @@ function Mobilenav({isOpen, HandleClick}) {
             <TimesIcon />
             <MobileWrapper>
                 <MobileMenu>
-                    <NavLink to="/" mobile onClick={HandleClick}>About Me</NavLink>
-                    <NavLink to="/" mobile onClick={HandleClick}>Education</NavLink>
-                    <NavLink to="/" mobile onClick={HandleClick}>Experience</NavLink>
-                    <NavLink to="/" mobile onClick={HandleClick}>Work</NavLink>
-                    <NavLink to="/" mobile onClick={HandleClick}>Contact</NavLink>
+                    <NavLink to="/" mobile="true" onClick={HandleClick}>About Me</NavLink>
+                    <NavLink to="/" mobile="true" onClick={HandleClick}>Education</NavLink>
+                    <NavLink to="/" mobile="true" onClick={HandleClick}>Experience</NavLink>
+                    <NavLink to="/" mobile="true" onClick={HandleClick}>Work</NavLink>
+                    <NavLink to="/" mobile="true" onClick={HandleClick}>Contact</NavLink>
                 </MobileMenu>
-                <NavButton mobile>Resume</NavButton>
+                <NavButton mobile="true">Resume</NavButton>
             </MobileWrapper>
         </MobileNav>
     )

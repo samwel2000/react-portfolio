@@ -34,12 +34,13 @@ export const StyledSocialList = styled.ul`
         margin-top: 20px;
         display: block;
         width: 1px;
-        height: 150px;
-        background-color: var(--light-slate);
+        height: 100px;
+        background-color: var(--slate);
     }
 `
 export const SocialLink = styled.a`
     text-decoration: none;
+    cursor: pointer;
     margin-top: 15px;
     transition: 1s ease-in-out;
 `
@@ -67,8 +68,8 @@ export const StyledEmail = styled.div`
         content: "";
         display: block;
         width: 1px;
-        height: 150px;
-        background-color: var(--light-slate);
+        height: 100px;
+        background-color: var(--slate);
     }
 `
 export const EmailLink = styled.a`
@@ -79,7 +80,7 @@ export const EmailLink = styled.a`
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
     cursor: pointer;
-    color: var(--light-slate);
+    color: var(--slate);
 
     &:hover {
         text-decoration: none;
@@ -88,7 +89,7 @@ export const EmailLink = styled.a`
     }
 `
 export const Instagram = styled(GrInstagram)`
-    color: var(--light-slate);
+    color: var(--slate);
     transition: 0.2s ease-in-out;
     transform: scale(1);
 
@@ -100,7 +101,7 @@ export const Instagram = styled(GrInstagram)`
 `
 
 export const Facebook = styled(FiFacebook)`
-    color: var(--light-slate);
+    color: var(--slate);
     transition: 0.2s ease-in-out;
     transform: scale(1);
 
@@ -111,7 +112,7 @@ export const Facebook = styled(FiFacebook)`
     }
 `
 export const Twitter = styled(FiTwitter)`
-    color: var(--light-slate);
+    color: var(--slate);
     transition: 0.2s ease-in-out;
     transform: scale(1);
 
@@ -122,7 +123,7 @@ export const Twitter = styled(FiTwitter)`
     }
 `
 export const Linkedin = styled(FiLinkedin)`
-    color: var(--light-slate);
+    color: var(--slate);
     transition: 0.2s ease-in-out;
     transform: scale(1);
 
@@ -133,7 +134,7 @@ export const Linkedin = styled(FiLinkedin)`
     }
 `
 export const Github = styled(FiGithub)`
-    color: var(--light-slate);
+    color: var(--slate);
     transition: 0.2s ease-in-out;
     transform: scale(1);
 

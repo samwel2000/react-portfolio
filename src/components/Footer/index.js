@@ -10,7 +10,6 @@ import {
     FooterWrapper,
     FooterItem,
     ExtraFooter, 
-    FooterEmail,
     SocialLink,
 } from './FooterElements';
 
@@ -24,7 +23,6 @@ function Footer() {
                 <FooterItem><SocialLink><Linkedin size="20px"/></SocialLink></FooterItem>
                 <FooterItem><SocialLink><Facebook size="25px"/></SocialLink></FooterItem>
             </ExtraFooter>
-            <FooterEmail>samwelgfrey@gmail.com</FooterEmail>
         </FooterWrapper>
     )
 }

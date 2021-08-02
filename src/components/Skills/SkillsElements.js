@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const SkillsWrapper = styled.section`
-    min-height: 100vh;
+    min-height: 70vh;
     width: 66%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     margin-top: 3rem;
-    margin-bottom: 3rem;
 
     @media screen and (max-width: 769px){
         width: 100%;
+        min-height: 40vh;
     }
 `
 export const SkillsetDiv = styled.div`
@@ -20,25 +19,11 @@ export const SkillSection = styled.div`
     width: 100%;
 `
 export const Skillset = styled.div`
-    background: var(--green-tint);
-    border-radius: 10px;
-    width: auto;
-    min-width: 9rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    &:not(last-child){
-        margin-right: 1rem;
-    }
-
-    @media screen and (max-width:360px){
-        min-width: 7rem;
-    }
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 `
 export const SkillHeading = styled.h1`
     color: var(--slate);
@@ -47,11 +32,16 @@ export const SkillHeading = styled.h1`
     text-transform: uppercase;
     padding-bottom: 0.5rem;
 `
-export const SkillName = styled.figcaption`
-    font-size: 1.05rem;
-`
-export const Skill = styled.figure`
+export const SkillName = styled.h3`
+    background: var(--green-tint);
+    border-radius: 10px;
     color: var(--slate);
-    font-size: 2.5rem;
+    font-size: 1.25rem;
+    padding: 0.35rem 0.75rem;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        color: #eee;
+    }
 `

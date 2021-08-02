@@ -6,8 +6,7 @@ import {
     SkillSection,
     SkillHeading,
     Skillset,
-    SkillName,
-    Skill
+    SkillName
 } from './SkillsElements';
 import { SoftwareDevskillData, DataAnalyticsskillData } from '../../data';
 
@@ -15,36 +14,26 @@ function Skills() {
     return (
         <SkillsWrapper id="skills">
             <HeadingDiv>
-                <SectionHeading num="02">
+                <SectionHeading num="03">
                     My skills
                 </SectionHeading>
             </HeadingDiv>
             <SkillsetDiv>
                 <SkillSection>
-                    <SkillHeading>Data collection and analysis</SkillHeading>
-                    {DataAnalyticsskillData.map((skills) => {
-                        return (
-                            <Skillset>
-                                <Skill key={skills.id}>
-                                    {skills.skill}
-                                    <SkillName>{skills.name}</SkillName>
-                                </Skill>
-                            </Skillset>
-                        )
-                    })}
+                    <SkillHeading>Data analytics tools</SkillHeading>
+                    <Skillset>
+                        {DataAnalyticsskillData.map((skills) => {
+                            return (<SkillName key={skills.id}>{skills.name}</SkillName>)
+                        })}
+                    </Skillset>
                 </SkillSection>
                 <SkillSection>
-                    <SkillHeading>Software development</SkillHeading>
-                    {SoftwareDevskillData.map((skills) => {
-                    return (
-                        <Skillset>
-                            <Skill key={skills.id}>
-                                {skills.skill}
-                                <SkillName>{skills.name}</SkillName>
-                            </Skill>
-                        </Skillset>
-                    );
-                    })}
+                    <SkillHeading className="pt-4">Software development</SkillHeading>
+                    <Skillset>
+                        {SoftwareDevskillData.map((skills) => {
+                            return (<SkillName key={skills.id}>{skills.name}</SkillName>);
+                        })}
+                    </Skillset>
                 </SkillSection>
             </SkillsetDiv>
         </SkillsWrapper>
