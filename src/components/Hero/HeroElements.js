@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const HeroWrapper = styled.section`
-    min-height: 89vh;
+    min-height: 100vh;
     width: 86%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 70px;
+    margin-top: 2rem;
     display: flex;
-    flex-direction: column;
-    justify-content:center;
+    align-items: center;
 
     @media screen and (max-width:768px){
         width: 100%;

@@ -88,7 +88,7 @@ export const ImageDiv = styled.div`
     // }
 `
 export const AboutImage = styled.img`
-    width: 18rem;
+    width: 17rem;
     mix-blend-mode: overlay;
     transition-duration: 1s;
     border-radius: 5px;
@@ -96,5 +96,8 @@ export const AboutImage = styled.img`
     &:hover {
         mix-blend-mode: normal;
         transition-duration: 1s;
+    }
+    @media screen and (max-width:769px){
+        width: 14rem;
     }
 `

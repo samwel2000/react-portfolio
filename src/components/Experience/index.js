@@ -21,7 +21,7 @@ NavTabPanel.tabsRole = 'TabPanel';
 function Experience() {
 
     return (
-        <ExperienceWrapper>
+        <ExperienceWrapper id="experience" >
             <HeadingDiv>
                 <SectionHeading num="02">
                     Experience
@@ -34,20 +34,20 @@ function Experience() {
                 >
                     <NavTabList>
                         {
-                            TabHeadingsData.map((heading, index) => {return (<NavTab key={index}>{heading}</NavTab>)})
+                            TabHeadingsData.map((heading, index) => <NavTab key={index}>{heading}</NavTab>)
                         }
                     </NavTabList>
 
                         {
-                            TabPanelsData.map((data) => { return (
-                                <NavTabPanel key={data.id}>
+                            TabPanelsData.map((data, index) => (
+                                <NavTabPanel key={index}>
                                     <TabPanelHeading>{data.heading} <TabHeadingSpan>{data.abbreviation}</TabHeadingSpan></TabPanelHeading>
                                     <TabHeadingDates>{data.dates}</TabHeadingDates>
                                     <JobContents>
                                         {data.duties.map((duty) => <JobContentsItem>{duty}</JobContentsItem>)}
                                     </JobContents>
                                 </NavTabPanel>
-                            )})
+                            ))
                         }
                     
                 </NavTabs>

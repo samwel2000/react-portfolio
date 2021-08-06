@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     @font-face {
         font-family: myThirdFont;
-        src: url(require('./assets/fonts/VarelaRound-Regular.tff));
+        src: url(require('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Mono&display=swap'));
     }
 
     * {

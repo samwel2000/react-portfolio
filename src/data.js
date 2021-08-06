@@ -1,4 +1,6 @@
-
+import EASTC from './assets/images/eastc.png';
+import TUNZADATA from './assets/images/tunzadata.png';
+import STOCKMANAGER from './assets/images/stock.png';
 /* Skills */
 
 export const SoftwareDevskillData = [
@@ -149,3 +151,37 @@ export const SoftwareDevskillData = [
       ]
     }
   ]
+
+
+export const ProjectsData = [
+  {
+    'id':1,
+    'project_setting':'featured project',
+    'heading':'University PT management system',
+    'photo':`${EASTC}`,
+    'stacks':['Django', 'HTML', 'Css', 'Bootstrap'],
+    'content': 'This is a university pratical training. it is meant to help university management in controlling students during their field practical training',
+    'project_link':'samwelgodfrey.pythonanywhere.com',
+    'github_link':'sdfgdfhdh'
+  },
+  {
+    'id':2,
+    'project_setting':'featured project',
+    'heading':'Business management system',
+    'photo':`${TUNZADATA}`,
+    'stacks':['Django', 'HTML', 'Css', 'Bootstrap', 'SAAS'],
+    'content': 'This is a business managment system made specifically for shop owner for ease and smooth management of their business. it is still in testing phase',
+    'project_link':'http://www.tunzadata.xyz',
+    'github_link':'sdfgdfhdh'
+  },
+  {
+    'id':3,
+    'project_setting':'featured project',
+    'heading':'Stock management system',
+    'photo':`${STOCKMANAGER}`,
+    'stacks':['Django', 'HTML', 'Css', 'Bootstrap', 'SAAS'],
+    'content': 'This is a stock managment system running under organization premises (IHI). it was built to help logistic manager in maintaining organizational stock',
+    'project_link':'/',
+    'github_link':'sdfgdfhdh'
+  },
+]
