@@ -44,7 +44,7 @@ function Experience() {
                                     <TabPanelHeading>{data.heading} <TabHeadingSpan>{data.abbreviation}</TabHeadingSpan></TabPanelHeading>
                                     <TabHeadingDates>{data.dates}</TabHeadingDates>
                                     <JobContents>
-                                        {data.duties.map((duty) => <JobContentsItem>{duty}</JobContentsItem>)}
+                                        {data.duties.map((duty, index) => <JobContentsItem key={index}>{duty}</JobContentsItem>)}
                                     </JobContents>
                                 </NavTabPanel>
                             ))

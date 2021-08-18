@@ -35,13 +35,13 @@ export const StyledSocialList = styled.ul`
         display: block;
         width: 1px;
         height: 100px;
-        background-color: var(--slate);
+        background-color: var(--light-slate);
     }
 `
 export const SocialLink = styled.a`
     text-decoration: none;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 25px;
     transition: 1s ease-in-out;
 `
 export const RightOrientation = styled.div`
@@ -69,7 +69,7 @@ export const StyledEmail = styled.div`
         display: block;
         width: 1px;
         height: 100px;
-        background-color: var(--slate);
+        background-color: var(--light-slate);
     }
 `
 export const EmailLink = styled.a`
@@ -81,6 +81,7 @@ export const EmailLink = styled.a`
     writing-mode: vertical-rl;
     cursor: pointer;
     color: var(--slate);
+    letter-spacing: 3px;
 
     &:hover {
         text-decoration: none;
@@ -95,7 +96,7 @@ export const Instagram = styled(GrInstagram)`
 
     &:hover {
         color: var(--green);
-        transform: scale(1.4);
+        transform: scale(1.2);
         padding-bottom: 4px;
     }
 `
@@ -107,7 +108,7 @@ export const Facebook = styled(FiFacebook)`
 
     &:hover {
         color: var(--green);
-        transform: scale(1.4);
+        transform: scale(1.2);
         padding-bottom: 4px;
     }
 `
@@ -118,7 +119,7 @@ export const Twitter = styled(FiTwitter)`
 
     &:hover {
         color: var(--green);
-        transform: scale(1.4);
+        transform: scale(1.2);
         padding-bottom: 4px;
     }
 `
@@ -129,7 +130,7 @@ export const Linkedin = styled(FiLinkedin)`
 
     &:hover {
         color: var(--green);
-        transform: scale(1.4);
+        transform: scale(1.2);
         padding-bottom: 4px;
     }
 `
@@ -140,7 +141,7 @@ export const Github = styled(FiGithub)`
 
     &:hover {
         color: var(--green);
-        transform: scale(1.4);
+        transform: scale(1.2);
         padding-bottom: 4px;
     }
 `

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ProjectsWrapper =  styled.section`
     min-height: 70vh;
@@ -21,17 +21,23 @@ export const ProjectWrapper = styled.div`
     align-items: center;
     justify-content: flex-end;
     position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     @media screen and (max-width: 769px) {
         height: 60vh;
+        padding: 0;
     }
+    ${props => props.right && css`
+        justify-content: flex-start;
+    `}
 `
 
 export const ImageDiv= styled.div`
     width: 60%;
     height: 100%;
     position: relative;
-    border-radius: 10px;
+    border-radius: 5px;
     z-index: 0;
 
     &::after {
@@ -39,11 +45,16 @@ export const ImageDiv= styled.div`
         width: 100%;
         height: 100%;
         position: absolute;
-        border-radius: 10px;
+        border-radius: 5px;
         z-index: 2;
         inset: 0;
         opacity: 0.5;
-        background: var(--green);
+        transition-duration: 0.5s;
+        background: var(--light-navy);
+    }
+
+    &:hover:after {
+        opacity: 0;
     }
 
     @media screen and (max-width:769px){
@@ -53,7 +64,7 @@ export const ImageDiv= styled.div`
 
         &::after {
             opacity: 0.9;
-            background: var(--dark-navy);
+            background: var(--light-navy);
             border-radius: 0;
         }
     }
@@ -62,7 +73,7 @@ export const Image= styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
 
     @media screen and (max-width:769px){
         border-radius: 0px;
@@ -85,36 +96,51 @@ export const ProjectContent = styled.div`
         padding: 1.5rem 1rem;
         width: 100%;
     }
+    ${props => props.right && css`
+        right: 0;
+        left: 50%;
+    `}
 `
 export const ProjectType = styled.p`
     font-size: 0.95rem;
     color: var(--green);
     padding: 0;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
     margin: 0;
     font-family: 'Roboto Mono', monospace;
+
+    ${props => props.right && css`
+        text-align: right;
+    `}
 
     @media screen and (max-width:769px){
         text-align: left;
     }
 `
 export const ProjectHeading = styled.h3`
-    text-align: right;
     text-align: left;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.75rem;
     padding-bottom: 1rem;
     color: var(--lightest-slate);
     font-family: 'Quicksand', sans-serif;
+    transition-duration: 0.2s;
+
+    &:hover {
+        color: var(--green);
+    }
 
     @media screen and (max-width:769px){
         text-align: left;
         padding: 0;
         padding-bottom: 1.3rem;
     }
+    ${props => props.right && css`
+        text-align: right;
+    `}
 `
 export const ProjectParagraph = styled.p`
-    text-align: right;
     text-align: left;
     font-size: 1rem;
     color: var(--light-slate);
@@ -131,25 +157,36 @@ export const ProjectParagraph = styled.p`
         border-radius: 0px;
         border: none;
     }
+    ${props => props.right && css`
+        text-align: right;
+    `}
 `
 export const ProjectStack = styled.ul`
     list-style: none;
     display: flex;
     padding: 0;
     gap: 2rem;
-    cursor: arrow;
-    justify-content: flex-end;
+    cursor: default;
     justify-content: flex-start;
+
+    ${props => props.right && css`
+        justify-content: flex-end;
+    `}
 
     @media screen and (max-width:769px){
         gap: 1rem;
         padding: 0;
+        justify-content: flex-start;
     }
 `
 export const ProjectLinks = styled.div`
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
+
+    ${props => props.right && css`
+        justify-content: flex-end;
+    `}
 
     @media screen and (max-width:769px){
         justify-content: flex-start;
@@ -161,5 +198,21 @@ export const ProjectLink = styled.a`
 
     :hover {
         color: var(--lightest-slate);
+    }
+`
+
+export const ViewMore = styled.a`
+    text-decoration: none;
+    color: var(--green);
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    transition-timing-function: cubic-bezier(.12,.69,.9,.66);
+    transition-duration: 0.2s;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--green);
+        font-size: 1.2rem;
     }
 `

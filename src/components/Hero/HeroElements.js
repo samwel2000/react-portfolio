@@ -11,6 +11,7 @@ export const HeroWrapper = styled.section`
 
     @media screen and (max-width:768px){
         width: 100%;
+        min-height: 90vh;
     }
 `
 export const HeroIntro = styled.p`
@@ -49,7 +50,7 @@ export const BioContent = styled.h3`
     }
 `
 export const Button = styled.button`
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     color: var(--green);
     border: 1px solid var(--green);
     background: inherit;

@@ -157,7 +157,7 @@ export const ProjectsData = [
   {
     'id':1,
     'project_setting':'featured project',
-    'heading':'University PT management system',
+    'heading':'PT management system',
     'photo':`${EASTC}`,
     'stacks':['Django', 'HTML', 'Css', 'Bootstrap'],
     'content': 'This is a university pratical training. it is meant to help university management in controlling students during their field practical training',
@@ -167,9 +167,9 @@ export const ProjectsData = [
   {
     'id':2,
     'project_setting':'featured project',
-    'heading':'Business management system',
+    'heading':'Business MS',
     'photo':`${TUNZADATA}`,
-    'stacks':['Django', 'HTML', 'Css', 'Bootstrap', 'SAAS'],
+    'stacks':['Django', 'Chart.js', 'SAAS'],
     'content': 'This is a business managment system made specifically for shop owner for ease and smooth management of their business. it is still in testing phase',
     'project_link':'http://www.tunzadata.xyz',
     'github_link':'sdfgdfhdh'
@@ -179,7 +179,7 @@ export const ProjectsData = [
     'project_setting':'featured project',
     'heading':'Stock management system',
     'photo':`${STOCKMANAGER}`,
-    'stacks':['Django', 'HTML', 'Css', 'Bootstrap', 'SAAS'],
+    'stacks':['Django', 'HTML', 'Css', 'Bootstrap'],
     'content': 'This is a stock managment system running under organization premises (IHI). it was built to help logistic manager in maintaining organizational stock',
     'project_link':'/',
     'github_link':'sdfgdfhdh'

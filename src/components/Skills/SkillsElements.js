@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SkillsWrapper = styled.section`
-    min-height: 70vh;
+    min-height: 80vh;
     width: 66%;
     margin: auto;
     margin-top: 3rem;

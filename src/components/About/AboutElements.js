@@ -49,15 +49,15 @@ export const ImageSection = styled.div`
         border: 2px solid var(--green);
         border-radius: 5px;
         position: absolute;
-        top: 5%;
-        left: 5%;
+        top: 6.5%;
+        left: 6.5%;
         z-index: -2;
         transition: 0.2s ease-in-out;
     }
 
     &:hover:after {
-        top: 5.5%;
-        left: 5.5%;
+        top: 5%;
+        left: 5%;
         transition: 0.1s ease-in-out;
     }
     @media screen and (max-width:769px){
@@ -65,31 +65,13 @@ export const ImageSection = styled.div`
     }
 `
 export const ImageDiv = styled.div`
-    // background:var(--green-tint);
+    background:var(--green-tint);
     border-radius: 5px;
-    // position: relative;
-
-    // &::after {
-    //     content:"";
-    //     width: 100%;
-    //     height: 100%;
-    //     position: absolute;
-    //     border-radius: 5px;
-    //     z-index: 5;
-    //     top: 0;
-    //     left: 0;
-    //     background: var(--green);
-    //     opacity: 0.3;
-    //     transition: 0.5s ease-in-out;
-    // }
-
-    // &::after:hover {
-    //     opacity: 0;
-    // }
 `
 export const AboutImage = styled.img`
-    width: 17rem;
-    mix-blend-mode: overlay;
+    width: 15rem;
+    mix-blend-mode: screen;
+    transition-property: mix-blend-mode;
     transition-duration: 1s;
     border-radius: 5px;
     

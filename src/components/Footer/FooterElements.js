@@ -30,7 +30,15 @@ export const FooterEmail = styled.a`
 export const FooterInfo = styled.p`
     color: var(--slate);
     font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.25rem;
     text-align: center;
+    cursor: default;
+
+    &:hover {
+        color: var(--light-slate);
+    }
 `
 export const ExtraFooter = styled.ul`
     display: flex;

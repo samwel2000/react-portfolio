@@ -18,11 +18,11 @@ function Orientation() {
         <>
             <LeftOrientation>
                 <StyledSocialList>
-                    <SocialLink><Github size="17px"/></SocialLink>
-                    <SocialLink><Instagram size="17px"/></SocialLink>
-                    <SocialLink><Twitter size="17px"/></SocialLink>
-                    <SocialLink><Linkedin size="17px"/></SocialLink>
-                    <SocialLink><Facebook size="20px"/></SocialLink>
+                    <SocialLink><Github size="20px"/></SocialLink>
+                    <SocialLink><Instagram size="20px"/></SocialLink>
+                    <SocialLink><Twitter size="20px"/></SocialLink>
+                    <SocialLink><Linkedin size="20px"/></SocialLink>
+                    <SocialLink><Facebook size="23px"/></SocialLink>
                 </StyledSocialList>
             </LeftOrientation>
             <RightOrientation>

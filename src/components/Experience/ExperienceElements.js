@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 
 export const ExperienceWrapper = styled.section`
-    min-height: 70vh;
+    min-height: 80vh;
     width: 67%;
     margin: auto;
     margin-top: 3rem;

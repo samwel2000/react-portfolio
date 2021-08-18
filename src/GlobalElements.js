@@ -35,10 +35,29 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background: var(--dark-navy);
         color: var(--light-slate);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.3;
         font-family: myThirdFont;
     }
     br {
         margin-top: 5rem;
+    }
+    body::-webkit-scrollbar {
+        width: 7px;
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--slate);
+        opacity: 0.5;
+        border: 2px solid var(--navy);
+        border-radius: 10px;
+    }
+    body::-webkit-scrollbar-track {
+        background: inherit;
+    }
+    ::selection {
+        background-color: var(--lightest-navy);
+        color: var(--lightest-slate);
     }
 `
 const MyContainer = styled.div`

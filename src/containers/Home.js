@@ -9,6 +9,7 @@ import { FooterInfo } from '../components/Footer/FooterElements'
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Project from '../components/Projects';
+import ContactMe from '../components/ContactMe';
 
 function Home() {
     return (
@@ -30,10 +31,15 @@ function Home() {
 
                 <Project />
 
+                <ContactMe />
+
             </main>
             <footer>
                 <Footer />
-                <FooterInfo>Designed and Developed by me</FooterInfo>
+                <div className="py-3">
+                    <FooterInfo>+255734157686 / +255652068080</FooterInfo>
+                    <FooterInfo>Developed by Samwel Godfrey</FooterInfo>
+                </div>
             </footer>
 
         </MyContainer>

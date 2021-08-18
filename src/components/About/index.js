@@ -20,7 +20,7 @@ function About() {
                 </SectionHeading>
             </HeadingDiv>
             <InnerContent>
-                <AboutInfo>
+                <AboutInfo data-aos="zoom-in" data-aos-duration="1000">
                     <Paragraph>
                         Hello! I'm Samwel, a fresh Statistics graduate with full stack (django-react) 
                         development skills based in Dar es salaam, TZ.
