@@ -1,5 +1,5 @@
 import React, { useEffect, useState }from 'react';
-import axios, { SKILLSENDPOINT } from '../../API';
+import axios, { SKILLSENDPOINT } from '../../Api';
 import { HeadingDiv, SectionHeading } from '../../GlobalElements';
 import { 
     SkillsWrapper, 

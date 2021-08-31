@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios, { PROJECTSENDPOINT } from '../../API';
+import axios, { PROJECTSENDPOINT } from '../../Api';
 import { SectionHeading } from '../../GlobalElements';
 import {
     ProjectsWrapper,

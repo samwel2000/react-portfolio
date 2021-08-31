@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios, { CONTACTENDPOINT } from '../../API';
+import axios, { CONTACTENDPOINT } from '../../Api';
 import { ContactButton, ContactBigHeader, ContactHeader, ContactWrapper, ContactContents, ContentWrapper } from './ContactMeElements'
 
 function ContactMe() {

@@ -12,7 +12,7 @@ import { ExperienceWrapper,
         JobContentsItem
         } from './ExperienceElements';
 import { HeadingDiv, SectionHeading } from '../../GlobalElements';
-import axios, { EXPERIENCEENDPOINT, ORGANIZATIONENDPOINT } from '../../API';
+import axios, { EXPERIENCEENDPOINT, ORGANIZATIONENDPOINT } from '../../Api';
 
 NavTabList.tabsRole = 'TabList';
 NavTab.tabsRole = 'Tab';

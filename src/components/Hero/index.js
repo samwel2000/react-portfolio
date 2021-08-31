@@ -1,4 +1,4 @@
-import axios, { HEROENDPOINT } from '../../API';
+import axios, { HEROENDPOINT } from '../../Api';
 import React, {useState, useEffect} from 'react';
 import {
     BioHeader,

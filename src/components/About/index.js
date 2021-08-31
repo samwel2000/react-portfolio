@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { HeadingDiv, SectionHeading } from '../../GlobalElements';
 // import Photo from "../../assets/images/photo.jpg";
-import axios, { ABOUTENDPOINT } from '../../API';
+import axios, { ABOUTENDPOINT } from '../../Api';
 import { 
     AboutWrapper, 
     InnerContent, 
