@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios, { BLOGCATEGORIESENDPOINT, BLOGSENDPOINT } from '../API';
+import axios, { BLOGCATEGORIESENDPOINT, BLOGSENDPOINT } from '../Api';
 import Photo from '../assets/images/eastc.png';
 import Layout from '../components/Layout';
 import {
