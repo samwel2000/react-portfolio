@@ -28,7 +28,6 @@ export const FooterEmail = styled.a`
     }
 `
 export const FooterInfo = styled.p`
-    color: var(--slate);
     font-size: 1rem;
     padding: 0;
     margin: 0;
@@ -36,8 +35,15 @@ export const FooterInfo = styled.p`
     text-align: center;
     cursor: default;
 
+    
+`
+export const FooterLink = styled.a`
+    text-decoration: none;
+    color: var(--slate);
+
     &:hover {
         color: var(--light-slate);
+        text-decoration: none;
     }
 `
 export const ExtraFooter = styled.ul`
@@ -45,6 +51,7 @@ export const ExtraFooter = styled.ul`
     justify-content: center;
     list-style: none;
     margin: 0;
+    padding: 0;
 `
 export const FooterItem = styled.li`
 color: var(--light-slate);

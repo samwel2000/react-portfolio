@@ -1,52 +1,68 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios, { PROJECTSENDPOINT } from '../../API';
 import { SectionHeading } from '../../GlobalElements';
 import {
-    ProjectsWrapper, 
-    ProjectWrapper, 
-    ImageDiv, 
-    Image, 
-    ProjectContent, 
-    ProjectHeading, 
-    ProjectParagraph, 
-    ProjectStack, 
+    ProjectsWrapper,
+    ProjectWrapper,
+    ImageDiv,
+    Image,
+    ProjectContent,
+    ProjectHeading,
+    ProjectParagraph,
+    ProjectStack,
     ProjectType,
     ProjectLinks,
-    ProjectLink, ViewMore } from "./ProjectElements";
-import { ProjectsData } from '../../data';
-import {FiGithub} from 'react-icons/fi';
-import {BiLinkExternal} from 'react-icons/bi';
+    ProjectLink,
+    ViewMoreWrapper,
+    ViewMore
+} from "./ProjectElements";
+import { FiGithub } from 'react-icons/fi';
+import { BiLinkExternal } from 'react-icons/bi';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 function Project() {
+    const [projectData, setprojectData] = useState([])
+
+    useEffect(() => {
+        axios.get(PROJECTSENDPOINT)
+            .then(res => setprojectData(res.data))
+            .catch(err => console.log(err))
+    }, [])
+
+    const imageAnimationStyle = window.innerWidth > 768 ? "fade-left" : "fade-in";
+    const contentAnimationStyle = window.innerWidth > 768 ? "fade-right" : "fade-in";
+    const animationDelay = window.innerWidth < 769 ? "500" : "0";
+
     return (
-        <ProjectsWrapper  id="projects">
+        <ProjectsWrapper id="projects">
             <SectionHeading num="04">Things I`ve built</SectionHeading>
             <div className="pt-4">
-                {ProjectsData.map((project, index) => (
-                    <ProjectWrapper 
-                    key={index} 
-                    className="mb-5 pb-5" 
-                    right={index % 2 === 0 && "right"}>
-                        <ImageDiv right={index % 2 === 0 && "right"}>
+                {projectData.map((project, index) => (
+                    <ProjectWrapper
+                        key={index}
+                        right={index % 2 === 0 && "right"}>
+                        <ImageDiv right={index % 2 === 0 && "right"} data-aos={imageAnimationStyle} data-aos-duration="1500">
                             <Image src={project.photo} alt="" />
                         </ImageDiv>
-                        <ProjectContent right={index % 2 === 0 && "right"}>
-                            <ProjectType right={index % 2 === 0 && "right"}>Featured project</ProjectType>
+                        <ProjectContent right={index % 2 === 0 && "right"} data-aos={contentAnimationStyle} data-aos-duration="1500" data-aos-delay={animationDelay}>
+                            <ProjectType right={index % 2 === 0 && "right"}>{project.project_setting}</ProjectType>
                             <ProjectHeading right={index % 2 === 0 && "right"}>{project.heading}</ProjectHeading>
                             <ProjectParagraph right={index % 2 === 0 && "right"}>{project.content}</ProjectParagraph>
                             <ProjectStack right={index % 2 === 0 && "right"}>
-                                {project.stacks.map((stack, index) => (
+                                {project.project_stack.split(",").map((stack, index) => (
                                     <li key={index}>{stack}</li>
                                 ))}
                             </ProjectStack>
                             <ProjectLinks right={index % 2 === 0 && "right"}>
-                                <ProjectLink href="/"><FiGithub /></ProjectLink>
-                                <ProjectLink href="/"><BiLinkExternal /></ProjectLink>
+                                <ProjectLink href="{project.project_link}"><FiGithub /></ProjectLink>
+                                <ProjectLink href="{project.github_link}"><BiLinkExternal /></ProjectLink>
                             </ProjectLinks>
                         </ProjectContent>
                     </ProjectWrapper>
                 ))}
-                
-                <ViewMore href="/">View archive of projects</ViewMore>
+                <ViewMoreWrapper>
+                    <ViewMore href="/" data-aos="fade-in" data-aos-duration="1000">View archive of projects <FaLongArrowAltRight /></ViewMore>
+                </ViewMoreWrapper>
             </div>
         </ProjectsWrapper>
     )

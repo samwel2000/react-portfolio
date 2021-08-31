@@ -74,7 +74,7 @@ export const StyledEmail = styled.div`
 `
 export const EmailLink = styled.a`
     text-decoration: none;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 10px;
     letter-spacing: 0.1em;
     -webkit-writing-mode: vertical-rl;

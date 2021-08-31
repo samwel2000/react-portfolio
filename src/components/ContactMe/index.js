@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios, { CONTACTENDPOINT } from '../../API';
 import { ContactButton, ContactBigHeader, ContactHeader, ContactWrapper, ContactContents, ContentWrapper } from './ContactMeElements'
 
 function ContactMe() {
+    const [contentData, setcontentData] = useState([])
+
+    useEffect(() => {
+        axios.get(CONTACTENDPOINT)
+            .then(res => setcontentData(res.data))
+            .catch(err => console.log(err))
+    }, [])
+
     return (
         <ContactWrapper>
             <ContentWrapper>
-                <ContactHeader>04. what's next?</ContactHeader>
-                <ContactBigHeader>Get In Touch</ContactBigHeader>
-                <ContactContents>
-                Although I'm not currently looking for any new opportunities, 
-                my inbox is always open. Whether you have a question or 
-                just want to say hi, 
-                I'll try my best to get back to you!
-                </ContactContents>
-                <ContactButton>Contact me</ContactButton>
+                <ContactHeader data-aos="fade-in" data-aos-duration="1000">04. what's next?</ContactHeader>
+                <ContactBigHeader data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Get In Touch</ContactBigHeader>
+                {contentData.map(data => (
+                    <ContactContents key={data.id} data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">{data.content}</ContactContents>
+                ))}
+                <ContactButton href="mailto:samwelgfrey@gmail.com" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Contact me</ContactButton>
             </ContentWrapper>
         </ContactWrapper>
     )

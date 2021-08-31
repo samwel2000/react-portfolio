@@ -11,9 +11,15 @@ export const Nav = styled.nav`
     left: auto;
     right: auto;
     z-index: 10;
+    transition-property: position;
+    transition-duration: 5s;
+
+    ${props => props.scrolled && css`
+        position: absolute;
+    `}
 `
 export const NavbarWrapper = styled.div`
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     margin: auto;
     width: 100%;
     display: flex;
@@ -41,6 +47,7 @@ export const NavMenu = styled.ul`
     margin:0;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
     counter-reset: item 0;
 
     @media screen and (max-width:768px) {
@@ -50,7 +57,6 @@ export const NavMenu = styled.ul`
 export const NavLink = styled(Link)`
     color: var(--white);
     text-decoration: none;
-    padding-left: 0.75rem;
     font-size: 1rem;
     counter-increment: item;
     cursor: pointer;
@@ -78,7 +84,7 @@ export const NavHamburger = styled(FaBars)`
     }
 ` 
 export const NavButton = styled.button`
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 0.95rem;
     color: var(--green);
     border: 1px solid var(--green);
     background: inherit;

@@ -10,7 +10,7 @@ export const ProjectsWrapper =  styled.section`
     flex-direction: column;
 
     @media screen and (max-width:768px){
-        min-height: 40vh;
+        min-height: 60vh;
         width: 100%;
     }
 `
@@ -23,10 +23,16 @@ export const ProjectWrapper = styled.div`
     position: relative;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin: 6rem 0.5rem;
+    margin-top: 0;
+    margin-bottom: 6rem;
 
     @media screen and (max-width: 769px) {
         height: 60vh;
         padding: 0;
+        margin: 3rem 0.5rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
     }
     ${props => props.right && css`
         justify-content: flex-start;
@@ -48,9 +54,9 @@ export const ImageDiv= styled.div`
         border-radius: 5px;
         z-index: 2;
         inset: 0;
-        opacity: 0.5;
+        opacity: 0.3;
         transition-duration: 0.5s;
-        background: var(--light-navy);
+        background: var(--green);
     }
 
     &:hover:after {
@@ -95,6 +101,10 @@ export const ProjectContent = styled.div`
         padding: 0;
         padding: 1.5rem 1rem;
         width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     ${props => props.right && css`
         right: 0;
@@ -143,6 +153,7 @@ export const ProjectHeading = styled.h3`
 export const ProjectParagraph = styled.p`
     text-align: left;
     font-size: 1rem;
+    line-height: 1.5;
     color: var(--light-slate);
     padding: 1.3rem;
     margin-top: 0.5rem;
@@ -201,13 +212,24 @@ export const ProjectLink = styled.a`
     }
 `
 
+export const ViewMoreWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+
+    @media screen and (max-width:769px){
+        margin-top: 0;
+    }
+`
+
 export const ViewMore = styled.a`
     text-decoration: none;
     color: var(--green);
     font-size: 1.2rem;
-    display: grid;
-    place-items: center;
-    transition-timing-function: cubic-bezier(.12,.69,.9,.66);
+    text-align: center;
+    letter-spacing: 1.5px;
+    transition-timing-function: cubic-bezier(.16,.67,.83,.67);
     transition-duration: 0.2s;
 
     &:hover {

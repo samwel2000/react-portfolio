@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.section`
-    min-height: 95vh;
+    min-height: 80vh;
     width: 76%;
     margin-top: auto;
     margin-left: auto;
@@ -42,11 +42,13 @@ export const ContactContents = styled.p`
         width: 100%;
     }
 `
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
+    text-decoration: none;
     padding: 0.75rem 1rem;
     color: var(--green);
     border: 1px solid var(--green);
     background: inherit;
+    text-align: center;
     width: 10rem;
     margin-left: auto;
     margin-right: auto;
@@ -55,6 +57,8 @@ export const ContactButton = styled.button`
     border-radius: 5px;
 
     &:hover {
+        text-decoration: none;
+        color: var(--green);
         background: var(--green-tint);
     }
 `

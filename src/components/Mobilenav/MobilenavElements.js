@@ -8,8 +8,8 @@ export const MobileNav = styled.aside`
     left:0;
     transition-style: ease-in-out;
     transition-delay: 0s;
-    transition-duration: 0.2s;
-    top:${({isOpen}) => (isOpen ? '0': '-1500px')};
+    transition-duration: 0.1s;
+    top:${({isOpen}) => (isOpen ? '0': '-100vh')};
     right:0;
     bottom:0;
     z-index: 999;

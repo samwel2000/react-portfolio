@@ -1,5 +1,5 @@
-// import axios from '../../Api';
-import React, {useEffect} from 'react';
+import axios, { HEROENDPOINT } from '../../API';
+import React, {useState, useEffect} from 'react';
 import {
     BioHeader,
     BioContent,
@@ -10,33 +10,24 @@ import {
 } from './HeroElements'
 
 function Hero() {
-    useEffect(() => {
-        // Option one
-        // axios.get('posts/')
-        // .then(res => {
-        //     console.log(res.data)
-        // }).catch(error => {
-        //     console.log("my error -->",error)
-        // })
+    const [herodata, setHerodata] = useState([]);
 
-        // const GetPosts = async () => {
-        //     const response = await axios.get('posts/')
-        //     console.log(response)
-        //     console.log(response.data)
-        // }
-        // GetPosts();
+    useEffect(() => {
+        axios.get(HEROENDPOINT)
+        .then(res => setHerodata(res.data))
+        .catch(err => console.err)
     }, [])
     return (
         <HeroWrapper id="hero">
-            <div>
-                <HeroIntro>Hi, my name is</HeroIntro>
-                <HeroName>Samwel Godfrey.</HeroName>
-                <BioHeader>A tech and data Ethusiast.</BioHeader>
-                <BioContent>I'm a Statistician and a Full stack (Django - React) developer based in Tanzania, I'm specialized in data analytics, 
-                while excelling in developing exceptional software products.
-                </BioContent>
-                <Button>Get in Touch</Button>
-            </div>
+            {herodata.map(data => (
+                <div key={data.id}>
+                    <HeroIntro data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Hi, my name is</HeroIntro>
+                    <HeroName data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Samwel Godfrey.</HeroName>
+                    <BioHeader data-aos="fade-in" data-aos-duration="1000" data-aos-delay="600">{data.bio_header}</BioHeader>
+                    <BioContent data-aos="fade-in" data-aos-duration="1000" data-aos-delay="800">{data.bio_content}</BioContent>
+                    <Button data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">Get in Touch</Button>
+                </div>
+            ))}
         </HeroWrapper>
     )
 }

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HeadingDiv, SectionHeading } from '../../GlobalElements';
-import Photo from "../../assets/images/photo.jpg";
+// import Photo from "../../assets/images/photo.jpg";
+import axios, { ABOUTENDPOINT } from '../../API';
 import { 
     AboutWrapper, 
     InnerContent, 
@@ -12,6 +13,14 @@ import {
 } from './AboutElements'
 
 function About() {
+    const [aboutData, setaboutData] = useState([])
+
+    useEffect(() => {
+        axios.get(ABOUTENDPOINT)
+        .then(res => setaboutData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     return (
         <AboutWrapper id="about">
             <HeadingDiv>
@@ -19,29 +28,26 @@ function About() {
                     About Me
                 </SectionHeading>
             </HeadingDiv>
-            <InnerContent>
-                <AboutInfo data-aos="zoom-in" data-aos-duration="1000">
-                    <Paragraph>
-                        Hello! I'm Samwel, a fresh Statistics graduate with full stack (django-react) 
-                        development skills based in Dar es salaam, TZ.
-                    </Paragraph>
-                    <Paragraph> 
-                        While specializing in data analytics, I enjoy creating things that live on the internet, 
-                        whether that be websites, applications, or anything in between 
-                        with the end goal of delivering exceptional software products.
-                        My goal is to always build products that provide pixel-perfect, 
-                        best user and performant experiences.
-                    </Paragraph>
-                    <Paragraph>
-                        I work on a wide variety of interesting and meaningful projects on a daily basis.
-                    </Paragraph>
-                </AboutInfo>
-                <ImageSection>
-                    <ImageDiv> 
-                        <AboutImage src={Photo} alt="My photo" />
-                    </ImageDiv>
-                </ImageSection>
-            </InnerContent>
+                {aboutData.map(data => (
+                <InnerContent key={data.id}>
+                    <AboutInfo data-aos="fade-out" data-aos-duration="2000" data-aos-delay="100">
+                        <Paragraph>
+                            {data.section1}
+                        </Paragraph>
+                        <Paragraph> 
+                            {data.section2}
+                        </Paragraph>
+                        <Paragraph>
+                            {data.section3}
+                        </Paragraph>
+                    </AboutInfo>
+                    <ImageSection>
+                        <ImageDiv> 
+                            <AboutImage src={data.photo} alt="My photo" />
+                        </ImageDiv>
+                    </ImageSection>
+                </InnerContent>
+            ))}
         </AboutWrapper>
     )
 }

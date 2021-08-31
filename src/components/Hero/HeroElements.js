@@ -24,7 +24,6 @@ export const HeroName = styled.h1`
     font-size: clamp(40px, 8vw, 80px);
     margin: 0;
     font-weight: 600;
-
     }
 `
 export const BioHeader = styled.h2`

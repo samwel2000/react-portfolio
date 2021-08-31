@@ -32,6 +32,9 @@ export const GlobalStyles = createGlobalStyle`
         --green: #64ffda;
         --green-tint: rgba(100,255,218,0.1);
     }
+    html {
+        scroll-behaviour: smooth;
+    }
     body {
         background: var(--dark-navy);
         color: var(--light-slate);

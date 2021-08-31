@@ -17,6 +17,7 @@ export const SkillsetDiv = styled.div`
 `
 export const SkillSection = styled.div`
     width: 100%;
+    margin-bottom: 1rem;
 `
 export const Skillset = styled.div`
     display: flex;

@@ -16,7 +16,7 @@ import {
 function Orientation() {
     return (
         <>
-            <LeftOrientation>
+            <LeftOrientation data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                 <StyledSocialList>
                     <SocialLink><Github size="20px"/></SocialLink>
                     <SocialLink><Instagram size="20px"/></SocialLink>
@@ -25,7 +25,7 @@ function Orientation() {
                     <SocialLink><Facebook size="23px"/></SocialLink>
                 </StyledSocialList>
             </LeftOrientation>
-            <RightOrientation>
+            <RightOrientation data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                 <StyledEmail>
                     <EmailLink href="mailto:samwelgfrey@gmail.com">samwelgfrey@gmail.com</EmailLink>
                 </StyledEmail>

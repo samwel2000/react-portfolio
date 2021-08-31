@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ExperienceWrapper, 
         ExperienceContent,
         NavTabs,
@@ -12,13 +12,25 @@ import { ExperienceWrapper,
         JobContentsItem
         } from './ExperienceElements';
 import { HeadingDiv, SectionHeading } from '../../GlobalElements';
-import { TabHeadingsData, TabPanelsData } from '../../data';
+import axios, { EXPERIENCEENDPOINT, ORGANIZATIONENDPOINT } from '../../API';
 
 NavTabList.tabsRole = 'TabList';
 NavTab.tabsRole = 'Tab';
 NavTabPanel.tabsRole = 'TabPanel';
 
 function Experience() {
+    const [experienceData, setexperienceData] = useState([])
+    const [organizationData, setorganizationData] = useState([])
+
+    useEffect(() => {
+        axios.get(EXPERIENCEENDPOINT)
+        .then(res => setexperienceData(res.data))
+        .catch(err => console.log(err))
+
+        axios.get(ORGANIZATIONENDPOINT)
+        .then(res => setorganizationData(res.data))
+        .catch(err =>  console.log(err))
+    }, [])
 
     return (
         <ExperienceWrapper id="experience" >
@@ -34,17 +46,19 @@ function Experience() {
                 >
                     <NavTabList>
                         {
-                            TabHeadingsData.map((heading, index) => <NavTab key={index}>{heading}</NavTab>)
+                            experienceData.map(data => 
+                            <NavTab key={data.id}>{organizationData.filter(organization => organization.id === data.organization).map(data => data.organization)}</NavTab>
+                            )
                         }
                     </NavTabList>
 
                         {
-                            TabPanelsData.map((data, index) => (
-                                <NavTabPanel key={index}>
-                                    <TabPanelHeading>{data.heading} <TabHeadingSpan>{data.abbreviation}</TabHeadingSpan></TabPanelHeading>
+                            experienceData.map(data => (
+                                <NavTabPanel key={data.id}>
+                                    <TabPanelHeading>{data.heading} <TabHeadingSpan>@ {organizationData.filter(organization => organization.id === data.organization).map(data => data.abbreviation)}</TabHeadingSpan></TabPanelHeading>
                                     <TabHeadingDates>{data.dates}</TabHeadingDates>
                                     <JobContents>
-                                        {data.duties.map((duty, index) => <JobContentsItem key={index}>{duty}</JobContentsItem>)}
+                                        {data.duties.split(",").map((duty, index) => <JobContentsItem key={index}>{duty}</JobContentsItem>)}
                                     </JobContents>
                                 </NavTabPanel>
                             ))

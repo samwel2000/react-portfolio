@@ -16,6 +16,7 @@ export const InnerContent = styled.div`
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 10px;
+    place-items: start;
     margin: 50px 0;
 
     @media screen and (max-width: 1000px){

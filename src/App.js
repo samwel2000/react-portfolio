@@ -1,4 +1,5 @@
 import AOS from "aos";
+import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import Archieve from "./containers/Archive";
 import Blog from "./containers/Blog";
@@ -6,7 +7,7 @@ import Home from "./containers/Home";
 import { GlobalStyles } from './GlobalElements';
 
 // initializing animate on scroll
-AOS.init();
+AOS.init({once: true});
 
 
 function App() {
