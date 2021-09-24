@@ -12,7 +12,7 @@ function ContactMe() {
     }, [])
 
     return (
-        <ContactWrapper>
+        <ContactWrapper id="contact">
             <ContentWrapper>
                 <ContactHeader data-aos="fade-in" data-aos-duration="1000">04. what's next?</ContactHeader>
                 <ContactBigHeader data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Get In Touch</ContactBigHeader>

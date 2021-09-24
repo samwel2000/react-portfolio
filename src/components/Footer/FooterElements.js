@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 
 export const FooterWrapper = styled.div`
     display: flex;
@@ -33,9 +33,19 @@ export const FooterInfo = styled.p`
     margin: 0;
     padding-bottom: 0.25rem;
     text-align: center;
-    cursor: default;
+    cursor: default;  
+`
+export const FooterSection = styled.div`
+    padding: 2rem;
 
-    
+    ${props => props.blog && css`
+        width: 73%;
+
+        @media screen and (max-width:1000px){
+            width: 100%;
+            margin: auto;
+        }
+    `}
 `
 export const FooterLink = styled.a`
     text-decoration: none;

@@ -46,21 +46,46 @@ export const GlobalStyles = createGlobalStyle`
     br {
         margin-top: 5rem;
     }
-    body::-webkit-scrollbar {
+    body::-webkit-scrollbar{
         width: 7px;
     }
-    body::-webkit-scrollbar-thumb {
+    body::-webkit-scrollbar-thumb{
         background-color: var(--slate);
         opacity: 0.5;
         border: 2px solid var(--navy);
         border-radius: 10px;
     }
-    body::-webkit-scrollbar-track {
+    body::-webkit-scrollbar-track,
+    pre::-webkit-scrollbar-track {
         background: inherit;
     }
     ::selection {
         background-color: var(--lightest-navy);
         color: var(--lightest-slate);
+    }
+    .blog__detail {
+        width: 100%;
+    }
+    pre::-webkit-scrollbar{
+        height: 5px;
+    }
+    pre::-webkit-scrollbar-thumb{
+        background-color: var(--slate);
+        opacity: 0.5;
+        border: 0.1px solid var(--navy);
+        border-radius: 10px;
+    }
+    .blog__detail > pre {
+        width: 100%;
+        padding: 1rem;
+        background: var(--light-slate);
+        // color: black;
+        font-weight: 600;
+        overflow-x: scroll;
+    }
+    .blog__detail > ul {
+        width: 100%;
+        padding: 1rem 1.4rem;
     }
 `
 const MyContainer = styled.div`

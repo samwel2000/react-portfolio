@@ -3,6 +3,8 @@ import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import Archieve from "./containers/Archive";
 import Blog from "./containers/Blog";
+import BlogDetail from "./containers/BlogDetail";
+import FilteredBlog from "./containers/FilteredBlogs";
 import Home from "./containers/Home";
 import { GlobalStyles } from './GlobalElements';
 
@@ -17,9 +19,13 @@ function App() {
         <GlobalStyles />
         <Switch>
 
-          <Route path="/blog/" component={Blog} />
+          <Route path="/blog/:id" component={BlogDetail} />
 
-          <Route path="/archive/" component={Archieve} />
+          <Route path="/blogs/:id" component={FilteredBlog} />
+
+          <Route exact path="/blog/" component={Blog} />
+
+          <Route exact path="/archive/" component={Archieve} />
 
           <Route exact path="/" component={Home} />
 

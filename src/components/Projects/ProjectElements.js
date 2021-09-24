@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const ProjectsWrapper =  styled.section`
@@ -223,7 +224,7 @@ export const ViewMoreWrapper = styled.div`
     }
 `
 
-export const ViewMore = styled.a`
+export const ViewMore = styled(Link)`
     text-decoration: none;
     color: var(--green);
     font-size: 1.2rem;

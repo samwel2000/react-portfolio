@@ -19,7 +19,7 @@ export const MobileNav = styled.aside`
 `
 export const MobileWrapper = styled.div`
     display: flex;
-    width: 100%;
+    width: 92%;
     height: 95%;
     margin: 0 auto;
     padding-right: 1.1rem ;

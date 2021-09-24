@@ -37,7 +37,7 @@ function Project() {
         <ProjectsWrapper id="projects">
             <SectionHeading num="04">Things I`ve built</SectionHeading>
             <div className="pt-4">
-                {projectData.map((project, index) => (
+                {projectData.filter((item, index) => index<4).map((project, index) => (
                     <ProjectWrapper
                         key={index}
                         right={index % 2 === 0 && "right"}>
@@ -61,7 +61,7 @@ function Project() {
                     </ProjectWrapper>
                 ))}
                 <ViewMoreWrapper>
-                    <ViewMore href="/" data-aos="fade-in" data-aos-duration="1000">View archive of projects <FaLongArrowAltRight /></ViewMore>
+                    <ViewMore to="/archive" data-aos="fade-in" data-aos-duration="1000">View archive of projects <FaLongArrowAltRight /></ViewMore>
                 </ViewMoreWrapper>
             </div>
         </ProjectsWrapper>
