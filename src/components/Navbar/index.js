@@ -3,27 +3,38 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import axios, { RESUMEENDPOINT } from '../../Api';
 import Mobilenav from '../Mobilenav';
-import { 
+import {
     Nav,
-    NavbarWrapper, 
-    LogoWrapper, 
-    NavMenu, 
+    NavbarWrapper,
+    LogoWrapper,
+    NavMenu,
     NavLink,
     NavLink2,
-    NavHamburger, 
+    NavHamburger,
     NavButton,
-    TextLogo, 
+    TextLogo,
 } from './NavbarElements'
 
 function Navbar() {
     const [isOpen, setisOpen] = useState(false);
-    const [resume, setResume] = useState([])
-    
+    const [resume, setResume] = useState([]);
+    const [scrolled, setscrolled] = useState(false)
+
     useEffect(() => {
         axios.get(RESUMEENDPOINT)
-        .then(res => setResume(res.data))
-        .catch(err => console.log(err))
+            .then(res => setResume(res.data))
+            .catch(err => console.log(err));
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                setscrolled(true)
+            } else {
+                setscrolled(false)
+            }
+            console.log(window.scrollY)
+        })
     }, [])
+
     const HandleClick = () => {
         setisOpen(!isOpen)
     }
@@ -31,54 +42,54 @@ function Navbar() {
     const currentUrlLocation = useLocation();
 
     return (
-        <Nav shadow={window.scrollY > 30 ? true : false}>
+        <Nav shadow={scrolled}>
             <NavbarWrapper>
                 <LogoWrapper data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
-                    <TextLogo><Link to="hero" smooth={true} offset={-100} 
-                            delay={300} duration={1000} >SG</Link></TextLogo>
+                    <TextLogo><Link to="hero" smooth={true} offset={-100}
+                        delay={300} duration={1000} >SG</Link></TextLogo>
                 </LogoWrapper>
-                    { currentUrlLocation.pathname === "/" ? 
+                {currentUrlLocation.pathname === "/" ?
                     <NavMenu>
-                        <NavLink to="about" 
-                            spy={true} smooth={true} offset={-100} 
-                            delay={300} duration={1000} 
-                            data-aos="fade-in" 
-                            data-aos-duration="1000" 
+                        <NavLink to="about"
+                            spy={true} smooth={true} offset={-100}
+                            delay={300} duration={1000}
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
                             data-aos-delay="200">About Me</NavLink>
-                        <NavLink to="experience" 
-                            spy={true} smooth={true} offset={-100} 
-                            delay={300} duration={1000} 
-                            data-aos="fade-in" 
-                            data-aos-duration="1000" 
+                        <NavLink to="experience"
+                            spy={true} smooth={true} offset={-100}
+                            delay={300} duration={1000}
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
                             data-aos-delay="500">Experience</NavLink>
-                        <NavLink to="skills" 
-                            spy={true} smooth={true} offset={-100} 
-                            delay={300} duration={1000} 
-                            data-aos="fade-in" 
-                            data-aos-duration="1000" 
+                        <NavLink to="skills"
+                            spy={true} smooth={true} offset={-100}
+                            delay={300} duration={1000}
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
                             data-aos-delay="300">My skills</NavLink>
-                        <NavLink to="projects" 
-                            spy={true} smooth={true} offset={-100} 
-                            delay={300} duration={1000} 
-                            data-aos="fade-in" 
-                            data-aos-duration="1000" 
+                        <NavLink to="projects"
+                            spy={true} smooth={true} offset={-100}
+                            delay={300} duration={1000}
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
                             data-aos-delay="400">Work</NavLink>
-                        <NavLink2 to="blog" 
-                            data-aos="fade-in" 
-                            data-aos-duration="1000" 
+                        <NavLink2 to="blog"
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
                             data-aos-delay="600">Blog</NavLink2>
-                        <NavLink to="contact" 
-                            spy={true} smooth={true} offset={-100} 
-                            delay={300} duration={1000} 
-                            data-aos="fade-in" 
-                            data-aos-duration="1000" 
+                        <NavLink to="contact"
+                            spy={true} smooth={true} offset={-100}
+                            delay={300} duration={1000}
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
                             data-aos-delay="600">Contact</NavLink>
-                        <NavButton 
-                        href={resume.map(file => `${file.file}`)} 
-                        target="_blank" rel="noreferrer noopener" 
-                        data-aos="fade-in" data-aos-duration="1000" 
-                        data-aos-delay="700" 
-                        download="SAMWEL-GODFREY resume"
+                        <NavButton
+                            href={resume.map(file => `${file.file}`)}
+                            target="_blank" rel="noreferrer noopener"
+                            data-aos="fade-in" data-aos-duration="1000"
+                            data-aos-delay="700"
+                            download="SAMWEL-GODFREY resume"
                         >
                             Resume
                         </NavButton>
@@ -88,17 +99,17 @@ function Navbar() {
                         <NavLink2 to="/" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Home</NavLink2>
                         <NavLink2 to='/blog' data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">Blog</NavLink2>
                         <NavLink2 to="/archive" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Archive</NavLink2>
-                        <NavButton 
-                        href={resume.map(file => `${file.file}`)} 
-                        target="_blank" rel="noreferrer noopener" 
-                        data-aos="fade-in" data-aos-duration="1000" 
-                        data-aos-delay="700" 
-                        download="SAMWEL-GODFREY resume"
+                        <NavButton
+                            href={resume.map(file => `${file.file}`)}
+                            target="_blank" rel="noreferrer noopener"
+                            data-aos="fade-in" data-aos-duration="1000"
+                            data-aos-delay="700"
+                            download="SAMWEL-GODFREY resume"
                         >
                             Resume
                         </NavButton>
                     </NavMenu>
-                    }
+                }
                 <NavHamburger onClick={HandleClick} />
             </NavbarWrapper>
             <Mobilenav isOpen={isOpen} HandleClick={HandleClick} />

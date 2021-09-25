@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import {FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import { Link as LinkS } from "react-scroll";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,8 @@ export const Nav = styled.nav`
     background: var(--dark-navy);
     height: 70px;
     position: fixed;
-    inset: 0;
+    top: 0;
+    left:0;
     width: 100%;
     z-index: 10;
     transition-delay: 0.1s;
@@ -53,7 +54,7 @@ export const NavMenu = styled.ul`
     @media screen and (max-width:768px) {
         display: none;
     }
-` 
+`
 export const NavLink = styled(LinkS)`
     color: var(--white);
     text-decoration: none;
@@ -73,7 +74,7 @@ export const NavLink = styled(LinkS)`
         margin-bottom: 1rem;
         font-size: 1.35rem;
     `}
-` 
+`
 export const NavLink2 = styled(Link)`
     color: var(--white);
     text-decoration: none;
@@ -93,7 +94,7 @@ export const NavLink2 = styled(Link)`
         margin-bottom: 1rem;
         font-size: 1.35rem;
     `}
-` 
+`
 export const NavHamburger = styled(FaBars)`
     color: var(--green);
     font-size: 2rem;
@@ -102,7 +103,7 @@ export const NavHamburger = styled(FaBars)`
     @media screen and (min-width:769px) {
         display: none;
     }
-` 
+`
 export const NavButton = styled.a`
     padding: 0.35rem 0.95rem;
     color: var(--green);
@@ -126,4 +127,4 @@ export const NavButton = styled.a`
         margin: 2rem auto;
         font-size: 1.35rem;
     `}
-` 
+`
