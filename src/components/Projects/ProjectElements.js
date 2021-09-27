@@ -70,7 +70,7 @@ export const ImageDiv= styled.div`
         border: none;
 
         &::after {
-            opacity: 0.99;
+            opacity: 0.98;
             background: var(--light-navy);
             border-radius: 0;
         }
@@ -133,7 +133,7 @@ export const ProjectHeading = styled.h3`
     font-weight: bold;
     cursor: pointer;
     font-size: 1.75rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.35rem;
     color: var(--lightest-slate);
     font-family: 'Quicksand', sans-serif;
     transition-duration: 0.2s;

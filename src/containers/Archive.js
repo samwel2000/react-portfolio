@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaAppStore, FaAppStoreIos } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
@@ -29,26 +29,26 @@ function Archive() {
                             <tr>
                                 <TableHeading width="10%">Year</TableHeading>
                                 <TableHeading width="30%">Title</TableHeading>
-                                <TableHeading width="10%">Made at</TableHeading>
+                                <TableHeading width="15%">Made at</TableHeading>
                                 <TableHeading width="35%">Built with</TableHeading>
-                                <TableHeading width="15%">Links</TableHeading>
+                                <TableHeading width="10%">Links</TableHeading>
                             </tr>
                         </thead>
                         <tbody>
-                            {projects.map(project =>      
-                                    <tr key={project.id}>
-                                        <Year>{project.year}</Year>
-                                        <Title>{project.heading}</Title>
-                                        <TableData>{project.made_at}</TableData>
-                                        <TableData>{project.project_stack}</TableData>
-                                        <TableDataLinks>
-                                            {project.project_link && <PLink href={project.project_link} target="blank" rel="noreferral noopener"><BiLinkExternal /></PLink>}
-                                            {project.github_link && <PLink href={project.github_link} target="blank" rel="noreferral noopener"><FiGithub /></PLink>} 
-                                            {project.appstore_link && <PLink href={project.appstore_link} target="blank" rel="noreferral noopener"><FaAppStoreIos /></PLink>}
-                                            {project.playstore_link && <PLink href={project.playstore_link} target="blank" rel="noreferral noopener"><FaAppStore /></PLink>}
-                                        </TableDataLinks>
-                                    </tr>
-                                )}
+                            {projects.map(project =>
+                                <tr key={project.id}>
+                                    <Year>{project.year}</Year>
+                                    <Title>{project.heading}</Title>
+                                    <TableData>{project.made_at}</TableData>
+                                    <TableData>{project.project_stack}</TableData>
+                                    <TableDataLinks>
+                                        {project.project_link && <PLink href={project.project_link} target="blank" rel="noreferral noopener"><BiLinkExternal /></PLink>}
+                                        {project.github_link && <PLink href={project.github_link} target="blank" rel="noreferral noopener"><FiGithub /></PLink>}
+                                        {project.appstore_link && <PLink href={project.appstore_link} target="blank" rel="noreferral noopener"><FaAppStoreIos /></PLink>}
+                                        {project.playstore_link && <PLink href={project.playstore_link} target="blank" rel="noreferral noopener"><FaAppStore /></PLink>}
+                                    </TableDataLinks>
+                                </tr>
+                            )}
                         </tbody>
                     </Table>
                 </TableWrapper>

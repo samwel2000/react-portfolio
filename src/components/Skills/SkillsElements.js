@@ -29,7 +29,7 @@ export const Skillset = styled.div`
 export const SkillHeading = styled.h1`
     color: var(--slate);
     opacity: 0.7;
-    font-size: clamp(10px, 8vh, 20px);
+    font-size: clamp(8px, 8vh, 20px);
     text-transform: uppercase;
     padding-bottom: 0.5rem;
 `
@@ -44,5 +44,9 @@ export const SkillName = styled.h3`
 
     &:hover {
         color: #eee;
+    }
+
+    @media screen and (max-width: 769px){
+        font-size: 1.05rem;
     }
 `
