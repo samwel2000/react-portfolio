@@ -10,7 +10,8 @@ import {
     BlogDescription,
     TagList,
     Tag,
-    BlogLink
+    BlogLink,
+    NoBlog
 } from './BlogElements';
 
 function Blog() {
@@ -48,7 +49,7 @@ function Blog() {
                 </BlogLink>
             )
                 :
-                <h1>No blogs yet</h1>
+                <NoBlog>No blogs yet</NoBlog>
             }
         </BlogLayout>
     )

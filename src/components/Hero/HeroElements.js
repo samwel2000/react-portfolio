@@ -20,23 +20,22 @@ export const HeroIntro = styled.p`
     margin:0;
 `
 export const HeroName = styled.h1`
-    color: var(--light-slate);
+    color: var(--lightest-slate);
     font-size: clamp(40px, 8vw, 80px);
     margin: 0;
-    font-weight: 600;
+    line-height:1;
+    font-weight: bolder;
     }
 `
 export const BioHeader = styled.h2`
     margin-top: 10px;
-    color: var(--slate);
-    line-height: 1.1;
+    color: var(--light-slate);
+    font-weight: bold;
     font-size: clamp(40px, 8vw, 80px);
 `
 export const BioContent = styled.h3`
-    max-width: 50%;
-    font-size: 1.3rem;
-    margin-top: 1rem;
-    line-height: 1.3;
+    max-width: 60%;
+    font-size: 1.2rem;
     color: var(--slate);
 
     @media screen and (max-width:1000px){

@@ -110,7 +110,7 @@ export const NavButton = styled.a`
     border: 1px solid var(--green);
     background: inherit;
     border-radius: 5px;
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-left: 20px;
     text-align: center;
     text-decoration: none;

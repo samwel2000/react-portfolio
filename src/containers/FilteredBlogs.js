@@ -10,7 +10,8 @@ import {
     BlogDescription,
     TagList,
     Tag,
-    BlogLink2
+    BlogLink2,
+    NoBlog
 } from './BlogElements';
 import { useParams } from 'react-router-dom';
 
@@ -58,13 +59,7 @@ function FilteredBlog() {
                 </BlogLink2>
             )
                 :
-                <h1 style={{
-                    textAlign: 'center',
-                    height: '190px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignContent: 'center'
-                }}>No blogs in {category} category yet</h1>
+                <NoBlog>No blogs in {category} category yet</NoBlog>
             }
         </BlogLayout>
     )

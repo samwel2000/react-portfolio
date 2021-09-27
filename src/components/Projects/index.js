@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios, { PROJECTSENDPOINT } from '../../Api';
-import { SectionHeading } from '../../GlobalElements';
+import { HeadingDiv, SectionHeading } from '../../GlobalElements';
 import {
     ProjectsWrapper,
     ProjectWrapper,
@@ -35,8 +35,10 @@ function Project() {
 
     return (
         <ProjectsWrapper id="projects">
-            <SectionHeading num="04">Things I`ve built</SectionHeading>
-            <div className="pt-4">
+            <HeadingDiv>
+                <SectionHeading num="04">Things I`ve built</SectionHeading>
+            </HeadingDiv>
+            <div className="pt-5">
                 {projectData.filter((item, index) => index<4).map((project, index) => (
                     <ProjectWrapper
                         key={index}

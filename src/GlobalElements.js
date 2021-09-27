@@ -41,7 +41,7 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
         line-height: 1.3;
-        font-family: myThirdFont;
+        font-family: 'Quicksand', sans-serif;
     }
     br {
         margin-top: 5rem;
@@ -112,11 +112,12 @@ export const HeadingDiv = styled.div`
 `
 export const SectionHeading = styled.h1`
     display: inline;
-    color: var(--light-slate);
+    color: var(--lightest-slate);
     background: var(--dark-navy);
     padding-right: 1rem;
-    font-size: clamp(26px,5vw,32px);
+    font-size: clamp(20px,5vw,26px);
     white-space: nowrap;
+    font-weight: 700;
 
     &:before {
         content: "${props => props.num}. ";

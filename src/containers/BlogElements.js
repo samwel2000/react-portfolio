@@ -247,7 +247,7 @@ export const SubscriptionWrapper = styled.section`
     }
 `
 export const SubscriptionHeading = styled.p`
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 1rem 0 0 0;
     text-align: center;
     line-height: 1.6;
@@ -269,7 +269,7 @@ export const InputLabel = styled.label`
     // background: rgba(2,12,27,0.2);
     text-align: center;
     color: green;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     top: 1px;
     left: 1px;
     padding: 0.1rem 0.4rem 0.3rem 0.4rem;
@@ -293,7 +293,7 @@ export const Input = styled.input`
 export const InputSubmit = styled.input`
     outline:none;
     background: inherit;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0 0.85rem;
     color: var(--light-slate);
     border: 2px solid var(--green-tint);
@@ -308,5 +308,13 @@ export const InputSubmit = styled.input`
     @media screen and (max-width:678px) {
         width: 10rem;
     }
+`
+export const NoBlog = styled.h3`
+    color: var(--light-slate);
+    text-align: center;
+    height: '190px';
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
 `
 

@@ -27,7 +27,7 @@ export const ContactBigHeader = styled.h3`
     color: var(--lightest-slate);
     text-transform: capitalize;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: center;
 `
 export const ContactContents = styled.p`

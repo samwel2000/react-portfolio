@@ -70,7 +70,7 @@ export const ImageDiv= styled.div`
         border: none;
 
         &::after {
-            opacity: 0.9;
+            opacity: 0.99;
             background: var(--light-navy);
             border-radius: 0;
         }
@@ -180,6 +180,7 @@ export const ProjectStack = styled.ul`
     gap: 2rem;
     cursor: default;
     justify-content: flex-start;
+    flex-wrap:wrap;
 
     ${props => props.right && css`
         justify-content: flex-end;

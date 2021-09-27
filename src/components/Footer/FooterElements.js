@@ -36,7 +36,7 @@ export const FooterInfo = styled.p`
     cursor: default;  
 `
 export const FooterSection = styled.div`
-    padding: 2rem;
+    padding: 0.5rem 2rem 1rem 2rem;
 
     ${props => props.blog && css`
         width: 73%;
@@ -62,6 +62,7 @@ export const ExtraFooter = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-bottom: -1rem;
 `
 export const FooterItem = styled.li`
 color: var(--light-slate);
