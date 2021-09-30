@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 export const BlogWrapper = styled.section`
     width: 86%;
     margin: 0 auto;
-    min-height: 50vh;
+    min-height: 65vh;
     margin-top: 5rem;
 
     @media screen and (max-width: 1000px) {

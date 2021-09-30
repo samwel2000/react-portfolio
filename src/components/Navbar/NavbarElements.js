@@ -13,6 +13,8 @@ export const Nav = styled.nav`
     z-index: 10;
     transition-delay: 0.1s;
     transition-duration: 0.3s;
+    font-family: var(--font-mono);
+    
 
     ${props => props.shadow && css`
         box-shadow: 0px 3px 4px var(--navy-shadow);
@@ -58,7 +60,7 @@ export const NavMenu = styled.ul`
 export const NavLink = styled(LinkS)`
     color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.85rem;
     counter-increment: item;
     cursor: pointer;
 
@@ -105,12 +107,12 @@ export const NavHamburger = styled(FaBars)`
     }
 `
 export const NavButton = styled.a`
-    padding: 0.35rem 0.95rem;
+    padding: 0.45rem 0.95rem;
     color: var(--green);
     border: 1px solid var(--green);
     background: inherit;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 2px;
+    font-size: 0.95rem;
     margin-left: 20px;
     text-align: center;
     text-decoration: none;

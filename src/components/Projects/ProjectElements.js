@@ -118,7 +118,7 @@ export const ProjectType = styled.p`
     padding: 0;
     padding-bottom: 0.25rem;
     margin: 0;
-    font-family: 'Roboto Mono', monospace;
+    font-family: var(--font-mono);
 
     ${props => props.right && css`
         text-align: right;
@@ -133,7 +133,7 @@ export const ProjectHeading = styled.h3`
     font-weight: bold;
     cursor: pointer;
     font-size: 1.75rem;
-    padding-bottom: 0.35rem;
+    padding-bottom: 0.2rem;
     color: var(--lightest-slate);
     font-family: 'Quicksand', sans-serif;
     transition-duration: 0.2s;
@@ -145,7 +145,6 @@ export const ProjectHeading = styled.h3`
     @media screen and (max-width:769px){
         text-align: left;
         padding: 0;
-        padding-bottom: 1.3rem;
     }
     ${props => props.right && css`
         text-align: right;

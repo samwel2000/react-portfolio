@@ -1,18 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-    @font-face {
-        font-family: myFirstFont;
-        src: url(require('./assets/fonts/Righteous-Regular.tff));
-    }
-    @font-face {
-        font-family: mySecondFont;
-        src: url(require('./assets/fonts/Merriweather-Bold.tff));
-    }
-    @font-face {
-        font-family: myThirdFont;
-        src: url(require('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Mono&display=swap'));
-    }
 
     * {
         margin: 0;
@@ -31,6 +19,8 @@ export const GlobalStyles = createGlobalStyle`
         --white: #e6f1ff;
         --green: #64ffda;
         --green-tint: rgba(100,255,218,0.1);
+        --font-mono: 'Roboto Mono', monospace;
+        --font-large: 'Raleway', sans-serif;
     }
     html {
         scroll-behaviour: smooth;
@@ -115,12 +105,16 @@ export const SectionHeading = styled.h1`
     color: var(--lightest-slate);
     background: var(--dark-navy);
     padding-right: 1rem;
-    font-size: clamp(20px,5vw,26px);
+    font-size: clamp(20px,5vw,24px);
     white-space: nowrap;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 1.5px;
 
     &:before {
-        content: "${props => props.num}. ";
+        content: "${props => props.num}.";
         color: var(--green);
+        font-size: clamp(15px,5vw,20px);
+        font-family: var(--font-mono);
+        font-weight: normal;
     }
 ` 

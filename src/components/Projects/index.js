@@ -51,13 +51,13 @@ function Project() {
                             <ProjectHeading right={index % 2 === 0 && "right"}>{project.heading}</ProjectHeading>
                             <ProjectParagraph right={index % 2 === 0 && "right"}>{project.content}</ProjectParagraph>
                             <ProjectStack right={index % 2 === 0 && "right"}>
-                                {project.project_stack.split(",").map((stack, index) => (
+                                {project.project_stack.split(",").map((stack, index) => (index <= 4 ) &&
                                     <li key={index}>{stack}</li>
-                                ))}
+                                )}
                             </ProjectStack>
                             <ProjectLinks right={index % 2 === 0 && "right"}>
-                                <ProjectLink href="{project.project_link}"><FiGithub /></ProjectLink>
-                                <ProjectLink href="{project.github_link}"><BiLinkExternal /></ProjectLink>
+                                {project.project_link && <ProjectLink href={project.project_link} target="_blank" rel="noopener noreferrer"><FiGithub /></ProjectLink>}
+                                {project.github_link &&<ProjectLink href={project.github_link} target="_blank" rel="noopener noreferrer"><BiLinkExternal /></ProjectLink>}
                             </ProjectLinks>
                         </ProjectContent>
                     </ProjectWrapper>

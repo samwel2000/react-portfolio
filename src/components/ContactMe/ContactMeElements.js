@@ -22,6 +22,7 @@ export const ContactHeader = styled.p`
     color: var(--green);
     font-size: 1rem;
     text-align: center;
+    font-family: var(--font-mono);
 `
 export const ContactBigHeader = styled.h3`
     color: var(--lightest-slate);
@@ -53,8 +54,9 @@ export const ContactButton = styled.a`
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
-    font-size: 1.1rem;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 2px;
+    font-family: var(--font-mono);
 
     &:hover {
         text-decoration: none;

@@ -27,10 +27,11 @@ export const InnerContent = styled.div`
 export const AboutInfo = styled.div`
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
 `
 export const Paragraph = styled.p`
     color: var(--light-slate);
-    padding: 10px 0;
+    padding: 3px 0;
     font-size: clamp(9px,5vw,18px);
     line-height: 1.4;
 `

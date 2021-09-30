@@ -28,9 +28,9 @@ function Archive() {
                         <thead>
                             <tr>
                                 <TableHeading width="10%">Year</TableHeading>
-                                <TableHeading width="30%">Title</TableHeading>
+                                <TableHeading width="35%">Title</TableHeading>
                                 <TableHeading width="15%">Made at</TableHeading>
-                                <TableHeading width="35%">Built with</TableHeading>
+                                <TableHeading width="30%">Built with</TableHeading>
                                 <TableHeading width="10%">Links</TableHeading>
                             </tr>
                         </thead>

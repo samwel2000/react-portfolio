@@ -19,7 +19,7 @@ function ContactMe() {
                 {contentData.map(data => (
                     <ContactContents key={data.id} data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">{data.content}</ContactContents>
                 ))}
-                <ContactButton href="mailto:samwelgfrey@gmail.com" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Contact me</ContactButton>
+                <ContactButton href="mailto:samwelgfrey@gmail.com" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">Contact me</ContactButton>
             </ContentWrapper>
         </ContactWrapper>
     )

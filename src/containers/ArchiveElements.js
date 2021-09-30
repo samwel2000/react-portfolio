@@ -72,6 +72,7 @@ export const TableDataLinks = styled.td`
     cursor: pointer;
     display: flex;
     gap: 0.35rem;
+    vertical-rl: center;
 `
 export const PLink = styled.a`
     text-decoration: none;

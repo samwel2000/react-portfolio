@@ -28,8 +28,8 @@ export const Skillset = styled.div`
 `
 export const SkillHeading = styled.h1`
     color: var(--slate);
-    opacity: 0.7;
-    font-size: clamp(8px, 8vh, 20px);
+    opacity: 0.6;
+    font-size: 0.95rem;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
 `
@@ -37,7 +37,7 @@ export const SkillName = styled.h3`
     background: var(--green-tint);
     border-radius: 10px;
     color: var(--slate);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding: 0.35rem 0.75rem;
     text-align: center;
     cursor: pointer;
