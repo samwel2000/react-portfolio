@@ -149,10 +149,11 @@ export const TagList = styled.ul`
 `
 export const Tag = styled.li`
     background: var(--green-tint);
-    padding: 0px 9px;
+    padding: 0.5px 9px;
     border-radius: 10px;
     white-space: nowrap;
     cursor: pointer;
+    font-family:var(--font-mono);
 
     &:before {
         content: "# ";
@@ -197,6 +198,8 @@ export const DirHeading = styled.h3`
     font-size: 1rem;
     font-weight: 600;
     padding-bottom: 0.25rem;
+    font-family:var(--font-mono);
+    letter-spacing: 2px;
 `
 export const SectionList = styled.ul`
     list-style-type: none;
