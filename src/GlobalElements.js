@@ -65,7 +65,17 @@ export const GlobalStyles = createGlobalStyle`
         border: 0.1px solid var(--navy);
         border-radius: 10px;
     }
-    .blog__detail > pre {
+    .blog__detail a {
+        color: inherit;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: var(--green);
+
+        &:hover {
+            color: var(--green);
+        }
+    }
+    .blog__detail pre {
         width: 100%;
         padding: 1rem;
         background: var(--light-slate);

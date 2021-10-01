@@ -47,7 +47,7 @@ function BlogLayout({blogscat, column, children}) {
 
     const failure = () => {
         message
-        .loading('Ypu are being subscribed..', 2.5)
+        .loading('You are being subscribed..', 2.5)
         .then(() => message.error('Something went wrong', 2.5))
         .then(() => message.info('Try again, if the error proceed contact me', 2.8));
     };

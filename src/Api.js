@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const BASE_URL = "http://localhost:8000/api/"
-const BASE_URL = "https://backend--portfolio.herokuapp.com/api/"
+const BASE_URL = "http://127.0.0.1:8000/api/"
+// const BASE_URL = "https://backend--portfolio.herokuapp.com/api/"
 export const HEROENDPOINT = 'hero-content/'
 export const ABOUTENDPOINT = 'about-content/'
 export const ORGANIZATIONENDPOINT = 'experience-organization/'
@@ -13,6 +13,7 @@ export const BLOGCATEGORIESENDPOINT = 'posts-category/'
 export const BLOGSENDPOINT = 'posts/'
 export const SUBSCRIBEENDPOINT = 'subscribe/'
 export const RESUMEENDPOINT = 'resume/'
+export const COMMENTENDPOINT = 'comment/'
 
 const instance = axios.create({
     baseURL: `${BASE_URL}`

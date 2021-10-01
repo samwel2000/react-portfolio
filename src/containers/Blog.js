@@ -23,6 +23,7 @@ function Blog() {
             let blogresponse = await axios.get(BLOGSENDPOINT);
             let blogcatresponse = await axios.get(BLOGCATEGORIESENDPOINT);
 
+            console.log(blogresponse)
             setblogs(blogresponse.data);
             setblogscat(blogcatresponse.data);
         }

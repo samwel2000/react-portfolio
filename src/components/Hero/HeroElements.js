@@ -27,12 +27,14 @@ export const HeroName = styled.h1`
     margin: 0;
     line-height:1.2;
     padding:bottom: 2px;
+    font-weight: 400;
     font-family: var(--font-large);
     }
 `
 export const BioHeader = styled.h2`
     margin-top: 10px;
-    color: var(--light-slate);
+    color: var(--slate);
+    font-weight: 300;
     font-size: clamp(40px, 8vw, 80px);
     font-family: var(--font-large);
     margin: 0;

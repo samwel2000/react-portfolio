@@ -3,6 +3,7 @@ import BlogLayout from '../components/BlogLayout';
 import axios, { BLOGCATEGORIESENDPOINT } from '../Api';
 import { useParams } from 'react-router-dom';
 import { BlogHeadingDetail, BlogDetailContainer } from './BlogElements';
+import Comment from '../components/Comment';
 
 
 function BlogDetail() {
@@ -34,6 +35,7 @@ function BlogDetail() {
             <BlogDetailContainer>
                 <BlogHeadingDetail>{blog.title && blog.title.toUpperCase()}</BlogHeadingDetail>
                 <div className="blog__detail" dangerouslySetInnerHTML={{ __html: content() }}></div>
+                <Comment id={blog.id ? blog.id : ""} />
             </BlogDetailContainer>
         </BlogLayout>
     )

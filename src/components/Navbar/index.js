@@ -31,7 +31,6 @@ function Navbar() {
             } else {
                 setscrolled(false)
             }
-            console.log(window.scrollY)
         })
     }, [])
 

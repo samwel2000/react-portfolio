@@ -106,12 +106,15 @@ export const BlogHeading = styled.h2`
     &:hover {
         color: var(--green);
     }
+    @media screen and (max-width:600px){
+        max-height: 9.9rem;
+    }
 `
 export const BlogHeadingDetail = styled.h1`
     font-weight: bold;
     font-size: 1.7rem;
     margin-bottom: 1rem;
-    color: var(--lightest-slate);
+    color: var(--white);
 
     &:hover {
         color: var(--green);
@@ -122,10 +125,13 @@ export const BlogDescription = styled.p`
     line-height: 1.5;
     overflow: hidden;
     max-height: 3.4rem;
-    white-space: nowrap;
     color: var(--light-slate);
     text-overflow: ellipsis;
     cursor: pointer;
+
+    @media screen and (max-width:600px){
+        max-height: 7rem;
+    }
 `
 export const BlogDetailContainer = styled.li`
     width: 100%;

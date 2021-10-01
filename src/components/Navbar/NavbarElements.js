@@ -80,7 +80,7 @@ export const NavLink = styled(LinkS)`
 export const NavLink2 = styled(Link)`
     color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.85rem;
     counter-increment: item;
     cursor: pointer;
 
