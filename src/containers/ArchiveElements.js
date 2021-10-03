@@ -41,7 +41,7 @@ export const Table = styled.table`
 export const TableHeading = styled.th`
     color: var(--slate);
     font-weigth: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.5rem 0;
 `
 export const Year = styled.td`
