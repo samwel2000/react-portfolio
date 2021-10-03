@@ -36,11 +36,29 @@ export const NavTabList = styled(TabList)`
   margin: 0;
   padding:0;
 
+  @media screen and (min-width:596px) {
+    max-height: 280px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+      width: 3px;
+      height: 2px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: var(--slate);
+        opacity: 0.2;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: inherit;
+    }
+  }
+
   @media screen and (max-width:595px) {
     flex-direction: row;
     overflow-x: scroll;
   }
-`;
+`
 
 export const NavTab = styled(Tab)`
   padding: 0.75rem 4px 0.75rem 0px;
@@ -99,9 +117,9 @@ export const NavTabPanel = styled(TabPanel)`
 
 export const TabPanelHeading = styled.h1`
   color: var(--white);
-  font-size: 1.5rem;
-  line-height: 1.6;
-  padding-bottom: 0.25rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding-bottom: 0.1rem;
 `
 
 export const TabHeadingSpan = styled.span`

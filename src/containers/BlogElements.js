@@ -112,12 +112,18 @@ export const BlogHeading = styled.h2`
 `
 export const BlogHeadingDetail = styled.h1`
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--lightest-slate);
+    letter-spacing: 1.5px;
 
     &:hover {
         color: var(--green);
+    }
+
+    @media screen and (max-width:400px){
+        font-size: 1.2rem;
     }
 `
 export const BlogDescription = styled.p`
@@ -326,4 +332,21 @@ export const NoBlog = styled.h3`
     justify-content: 'center';
     align-items: 'center';
 `
+export const InfoDiv = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+` 
+export const InfoDivInner = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: var(--font-mono);
+    color: var(--slate);
+    padding-bottom: 1rem;
+    gap: 0.3rem;
+` 
+
 

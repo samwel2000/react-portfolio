@@ -55,6 +55,8 @@ export const GlobalStyles = createGlobalStyle`
     }
     .blog__detail {
         width: 100%;
+        color: var(--light-slate);
+        letter-spacing: 1.8px;
     }
     pre::-webkit-scrollbar{
         height: 5px;
@@ -100,7 +102,7 @@ export const HeadingDiv = styled.div`
         display: block;
         width: 70%;
         height: 2px;
-        margin-top: -15px;
+        margin-top: -13px;
         background-color: var(--lightest-navy);
     }
 
@@ -127,4 +129,4 @@ export const SectionHeading = styled.h1`
         font-family: var(--font-mono);
         font-weight: normal;
     }
-` 
+`

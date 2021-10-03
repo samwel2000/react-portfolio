@@ -27,7 +27,9 @@ export const ContactHeader = styled.p`
 export const ContactBigHeader = styled.h3`
     color: var(--lightest-slate);
     text-transform: capitalize;
+    font-family: var(--font-large);
     font-size: 3rem;
+    letter-spacing: 1.2px;
     font-weight: bolder;
     text-align: center;
 `
@@ -36,7 +38,6 @@ export const ContactContents = styled.p`
     font-size: 1.2rem;
     text-align: center;
     width: 30rem;
-    padding-top: 1rem;
     margin: auto;
 
     @media screen and (max-width: 769px){

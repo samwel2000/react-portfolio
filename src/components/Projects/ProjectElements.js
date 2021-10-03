@@ -126,6 +126,7 @@ export const ProjectType = styled.p`
 
     @media screen and (max-width:769px){
         text-align: left;
+        padding-bottom: 0.4rem;
     }
 `
 export const ProjectHeading = styled.h3`
