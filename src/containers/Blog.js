@@ -13,6 +13,7 @@ import {
     BlogLink,
     NoBlog
 } from './BlogElements';
+import { Helmet } from 'react-helmet';
 
 function Blog() {
     const [blogscat, setblogscat] = useState([])
@@ -33,6 +34,11 @@ function Blog() {
 
     return (
         <BlogLayout blogscat={blogscat}>
+            <Helmet>
+                <title>Samwel Godfrey | Blog</title>
+                <link rel="canonical" href="https://samwelgodfrey.com/blog" />
+                <meta name="description" content="My blogs. a comprehensive list of all blogs" />
+            </Helmet>
             {blogs.length > 0 ? blogs.map((blog, index) =>
                 <BlogLink to={`blog/${blog.slug}`} key={index}>
                     <BlogContent>

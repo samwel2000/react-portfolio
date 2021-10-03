@@ -43,6 +43,7 @@ export const TableHeading = styled.th`
     font-weigth: bold;
     font-size: 1rem;
     padding: 0.5rem 0;
+    letter-spacing: 1.2px;
 `
 export const Year = styled.td`
     color: var(--green);

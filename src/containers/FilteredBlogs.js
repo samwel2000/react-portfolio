@@ -14,6 +14,8 @@ import {
     NoBlog
 } from './BlogElements';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 function FilteredBlog() {
     const [blogscat, setblogscat] = useState([])
@@ -30,6 +32,7 @@ function FilteredBlog() {
             setfilteredBlogs(uniqueBlogs);
             console.log(blogresponse.data)
             setblogscat(blogcatresponse.data);
+
         }
 
         getData();
@@ -39,6 +42,11 @@ function FilteredBlog() {
 
     return (
         <BlogLayout blogscat={blogscat} column={true}>
+            <Helmet>
+                <title>Blogs | {category}</title>
+                <link rel="canonical" href={`https://samwelgodfrey.com/blogs/${category}`} />
+                <meta name="description" content={`Blogs in ${category} category`} />
+            </Helmet>
             {filteredBlogs.length > 0 ? filteredBlogs.map((blog, index) =>
                 <BlogLink2 to={`../blog/${blog.slug}`} key={index}>
                     <BlogContent>

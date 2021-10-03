@@ -25,7 +25,7 @@ import {
     WhatsappIcon,
     WhatsappShareButton
 } from 'react-share';
-
+import { Helmet } from 'react-helmet';
 
 function BlogDetail() {
     const [blogscat, setblogscat] = useState([])
@@ -48,9 +48,12 @@ function BlogDetail() {
             axios.patch(url, { view_count: blogdetail.data.view_count + 1 })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
+
+            document.title = "Blog | " + blogdetail.data.title;
         }
 
         getData();
+
     }, [slug])
 
     const ImgageUrl = "src=\"http://localhost:8000/media/blogsContent";
@@ -70,6 +73,12 @@ function BlogDetail() {
     }
     return (
         <BlogLayout blogscat={blogscat} column={true}>
+            <Helmet>
+                <title>Blogs | {`${blog.title}`}</title>
+                <link rel="canonical" href={`https://samwelgodfrey.com/blog/${blog.slug}`} />
+                <meta name="description" content={blog.blog_intro} />
+            </Helmet>
+
             <BlogDetailContainer>
                 <BlogHeadingDetail>{blog.title && blog.title.toUpperCase()}</BlogHeadingDetail>
                 <InfoDiv>
