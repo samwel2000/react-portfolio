@@ -40,16 +40,12 @@ function BlogDetail() {
         const getData = async () => {
             let blogdetail = await axios.get(url);
             let blogcatresponse = await axios.get(BLOGCATEGORIESENDPOINT);
-
             setblogscat(blogcatresponse.data);
             setshare_count(blogdetail.data.share_count)
             setblog(blogdetail.data);
-
             axios.patch(url, { view_count: blogdetail.data.view_count + 1 })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
-
-            document.title = "Blog | " + blogdetail.data.title;
         }
 
         getData();
@@ -63,14 +59,12 @@ function BlogDetail() {
 
     const HandleShareIncrement = () => {
         const url = `post/${slug}/`;
-
-
         axios.patch(url, { share_count: share_count + 1 })
             .then(res => console.log(res))
             .catch(err => console.log(err));
-
         setshare_count(share_count + 1);
     }
+
     return (
         <BlogLayout blogscat={blogscat} column={true}>
             <Helmet>
@@ -82,12 +76,13 @@ function BlogDetail() {
             <BlogDetailContainer>
                 <BlogHeadingDetail>{blog.title && blog.title.toUpperCase()}</BlogHeadingDetail>
                 <InfoDiv>
-                    <FacebookShareButton url={Url} style={{ opacity: 0.8 }}>
+                    <FacebookShareButton url={Url} quote={blog.title} style={{ opacity: 0.8 }}>
                         <FacebookIcon size={33} round={true} onClick={HandleShareIncrement} />
                     </FacebookShareButton>
                     <TwitterShareButton
                         url={Url}
                         title={blog.title}
+                        related="samwelgodfrey8"
                         style={{ opacity: 0.8 }}
                     >
                         <TwitterIcon size={33} round={true} onClick={HandleShareIncrement} />
@@ -95,13 +90,18 @@ function BlogDetail() {
                     <FacebookMessengerShareButton url={Url} style={{ opacity: 0.8 }}>
                         <FacebookMessengerIcon size={33} round={true} onClick={HandleShareIncrement} />
                     </FacebookMessengerShareButton>
-                    <WhatsappShareButton url={Url} style={{ opacity: 0.8 }}>
+                    <WhatsappShareButton url={Url} title={blog.title} style={{ opacity: 0.8 }}>
                         <WhatsappIcon size={33} round={true} onClick={HandleShareIncrement} />
                     </WhatsappShareButton>
-                    <LinkedinShareButton url={Url} style={{ opacity: 0.8 }}>
+                    <LinkedinShareButton
+                        url={Url}
+                        title={blog.title}
+                        summary={blog.blog_intro}
+                        source="samwelgodfrey.com"
+                        style={{ opacity: 0.8 }}>
                         <LinkedinIcon size={33} round={true} onClick={HandleShareIncrement} />
                     </LinkedinShareButton>
-                    <TelegramShareButton url={Url} style={{ opacity: 0.8 }}>
+                    <TelegramShareButton url={Url} title={blog.title} style={{ opacity: 0.8 }}>
                         <TelegramIcon size={33} round={true} onClick={HandleShareIncrement} />
                     </TelegramShareButton>
                 </InfoDiv>
