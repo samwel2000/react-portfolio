@@ -40,7 +40,7 @@ function Blog() {
                 <meta name="description" content="My blogs. a comprehensive list of all blogs" />
             </Helmet>
             {blogs.length > 0 ? blogs.map((blog, index) =>
-                <BlogLink to={`blog/${blog.slug}`} key={index}>
+                <BlogLink to={`blog/${blog.slug}`} key={index} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={`${index}0`}>
                     <BlogContent>
                         <ImageDiv>
                             <BlogImage src={blog.photo} />

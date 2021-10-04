@@ -53,10 +53,9 @@ export const Year = styled.td`
 export const Title = styled.td`
     color: var(--lightest-slate);
     font-weigth: 600;
-    font-size: 1rem;
     padding: 0.35rem 0;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 `
 export const TableData = styled.td`
     color: var(--light-slate);
@@ -74,6 +73,7 @@ export const TableDataLinks = styled.td`
     display: flex;
     gap: 0.35rem;
     vertical-rl: center;
+    padding-left: 10px;
 `
 export const PLink = styled.a`
     text-decoration: none;

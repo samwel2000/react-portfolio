@@ -37,7 +37,7 @@ function Archive() {
                                 <TableHeading width="35%">Title</TableHeading>
                                 <TableHeading width="15%">Made at</TableHeading>
                                 <TableHeading width="30%">Built with</TableHeading>
-                                <TableHeading width="10%">Links</TableHeading>
+                                <TableHeading width="10%" style={{paddingLeft:"10px"}}>Links</TableHeading>
                             </tr>
                         </thead>
                         <tbody>
