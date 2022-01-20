@@ -56,8 +56,8 @@ function Project() {
                                 )}
                             </ProjectStack>
                             <ProjectLinks right={index % 2 === 0 && "right"}>
-                                {project.project_link && <ProjectLink href={project.project_link} target="_blank" rel="noopener noreferrer"><FiGithub /></ProjectLink>}
-                                {project.github_link && <ProjectLink href={project.github_link} target="_blank" rel="noopener noreferrer"><BiLinkExternal /></ProjectLink>}
+                                {project.github_link && <ProjectLink href={project.github_link} target="_blank" rel="noopener noreferrer"><FiGithub /></ProjectLink>}
+                                {project.project_link && <ProjectLink href={project.project_link} target="_blank" rel="noopener noreferrer"><BiLinkExternal /></ProjectLink>}
                             </ProjectLinks>
                         </ProjectContent>
                     </ProjectWrapper>
